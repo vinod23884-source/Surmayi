@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>सुरमई • रूहानी नगमों का मखमली ठहराव</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎵</text></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Rozha+One&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #0e1015;
+      color: #f8fafc;
+      overflow-x: hidden;
+    }
+    .font-hindi {
+      font-family: 'Rozha One', serif;
+    }
+    .font-cinzel {
+      font-family: 'Cinzel', serif;
+    }
+    .glass-card {
+      background: rgba(16, 18, 26, 0.34);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+    }
+    @media (min-width: 640px) {
+      .glass-card {
+        background: rgba(18, 20, 28, 0.46);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+      }
+    }
+    .glass-pill {
+      background: rgba(24, 27, 38, 0.62);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+    }
+    .vinyl-spin {
+      animation: spin 18s linear infinite;
+    }
+    .vinyl-pause {
+      animation-play-state: paused;
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .bg-layer {
+      transition: opacity 1.4s cubic-bezier(0.4, 0, 0.2, 1), transform 25s ease-out;
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(15, 17, 24, 0.8);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(251, 191, 36, 0.5);
+    }
+
+    /* Bespoke Classy Turntable & Gramophone Aesthetics */
+    .turntable-platter {
+      background:
+        repeating-radial-gradient(
+          circle at center,
+          rgba(255, 255, 255, 0.04) 0px,
+          rgba(255, 255, 255, 0.04) 1px,
+          transparent 1px,
+          transparent 4px
+        ),
+        radial-gradient(circle at 30% 30%, #27272a 0%, #09090b 65%, #000000 100%);
+      box-shadow:
+        inset 0 0 18px rgba(0, 0, 0, 0.95),
+        0 12px 32px rgba(0, 0, 0, 0.75),
+        0 0 0 2px rgba(251, 191, 36, 0.35);
+    }
+    .vinyl-sheen {
+      background: conic-gradient(
+        from 45deg,
+        transparent 0deg,
+        rgba(255, 255, 255, 0.14) 35deg,
+        transparent 75deg,
+        transparent 180deg,
+        rgba(251, 191, 36, 0.12) 215deg,
+        transparent 255deg
+      );
+    }
+    .tonearm {
+      transform-origin: 82% 18%;
+      transition: transform 0.9s cubic-bezier(0.34, 1.56, 0.64, 1);
+      transform: rotate(-28deg);
+    }
+    .tonearm.engaged {
+      transform: rotate(4deg);
+    }
+    .eq-bar {
+      width: 3px;
+      border-radius: 9999px;
+      background: linear-gradient(to top, #d97706, #fde68a);
+      height: 5px;
+      transition: height 0.2s ease;
+    }
+    .eq-playing .eq-bar:nth-child(1) { animation: eqPulse 0.75s ease-in-out infinite alternate; }
+    .eq-playing .eq-bar:nth-child(2) { animation: eqPulse 0.55s ease-in-out infinite alternate 0.15s; }
+    .eq-playing .eq-bar:nth-child(3) { animation: eqPulse 0.85s ease-in-out infinite alternate 0.30s; }
+    .eq-playing .eq-bar:nth-child(4) { animation: eqPulse 0.60s ease-in-out infinite alternate 0.10s; }
+    .eq-playing .eq-bar:nth-child(5) { animation: eqPulse 0.80s ease-in-out infinite alternate 0.25s; }
+    @keyframes eqPulse {
+      0% { height: 4px; opacity: 0.55; }
+      100% { height: 18px; opacity: 1; }
+    }
+    .classy-player-shell {
+      background: linear-gradient(145deg, rgba(22, 19, 18, 0.44) 0%, rgba(12, 13, 18, 0.52) 100%);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(251, 191, 36, 0.38);
+      box-shadow:
+        0 20px 55px rgba(0, 0, 0, 0.55),
+        inset 0 1px 0 rgba(255, 243, 214, 0.22);
+    }
+    @media (min-width: 640px) {
+      .classy-player-shell {
+        background: linear-gradient(145deg, rgba(24, 21, 20, 0.64) 0%, rgba(12, 13, 18, 0.72) 100%);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+    }
+  </style>
+</head>
+<body class="relative min-h-screen flex flex-col justify-between selection:bg-amber-400/30 selection:text-amber-100">
+
+  <!-- Dual Dynamic Vibrant & Atmospheric Background Layers -->
+  <div id="bgLayerA" class="bg-layer fixed inset-0 z-0 bg-cover bg-center opacity-100 scale-105"></div>
+  <div id="bgLayerB" class="bg-layer fixed inset-0 z-0 bg-cover bg-center opacity-0 scale-100"></div>
+  
+  <!-- Light & Balanced Vignette (Keeps colors vibrant & readable without making screen gloomy) -->
+  <div class="fixed inset-0 z-0 pointer-events-none bg-gradient-to-t from-black/75 via-black/15 to-black/45"></div>
+  <div class="fixed inset-0 z-0 pointer-events-none bg-[radial-gradient(circle_at_center,_transparent_35%,_rgba(0,0,0,0.55)_100%)]"></div>
+  
+  <!-- Procedural Weather & Particle Canvas Engine -->
+  <canvas id="weatherCanvas" class="fixed inset-0 z-0 pointer-events-none"></canvas>
+
+  <!-- Off-screen Active YouTube Audio Engine (Must NOT have display:none) -->
+  <div id="ytPlayerContainer" style="position: fixed; bottom: 0; right: 0; width: 200px; height: 200px; opacity: 0.001; pointer-events: none; z-index: -1;">
+    <div id="ytPlayer"></div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="relative z-20 w-full px-3.5 sm:px-8 lg:px-12 py-3 sm:py-5 flex flex-wrap items-center justify-between gap-2 sm:gap-3">
+    <!-- Prominent Brand & Headphone Experience Note -->
+    <div class="flex items-center gap-3 sm:gap-4">
+      <div class="w-11 h-11 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full border-2 border-amber-300/60 flex items-center justify-center bg-black/45 backdrop-blur-md shadow-[0_0_25px_rgba(251,191,36,0.25)] flex-shrink-0">
+        <span class="text-amber-300 font-hindi text-2xl sm:text-3xl md:text-4xl leading-none mt-1">सु</span>
+      </div>
+      <div>
+        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-hindi tracking-wide text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.65)] leading-none">
+          सुरमई <span class="text-xs sm:text-sm md:text-base font-sans tracking-[0.22em] text-amber-300 uppercase ml-1.5 font-semibold">Surmayi</span>
+        </h1>
+        <p class="text-[11px] sm:text-xs md:text-sm text-zinc-100/90 tracking-wider mt-0.5 sm:mt-1">रूहानी नगमों का मखमली ठहराव</p>
+        <div class="mt-1.5 sm:mt-2 inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-amber-400/15 border border-amber-300/35 backdrop-blur-md shadow-sm">
+          <span class="text-xs sm:text-sm">🎧</span>
+          <span class="text-[10px] sm:text-xs text-amber-100 font-medium tracking-wide">हेडफ़ोन लगाइए — आप एक अलग ही सुरों की दुनिया में खो जाएंगे</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Prominent Center & Right Action Pills + Bold Live Listeners Counter -->
+    <div class="flex flex-wrap items-center justify-center sm:justify-end gap-2.5 sm:gap-3 w-full lg:w-auto">
+      <!-- Prominent Live Listeners Counter Pill -->
+      <div class="glass-pill px-5 py-2.5 rounded-full text-sm sm:text-base text-emerald-200 flex items-center gap-2.5 shadow-[0_0_25px_rgba(16,185,129,0.28)] border-2 border-emerald-400/50 bg-emerald-950/50" title="Surmayi Listeners">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+        <span class="text-emerald-100 font-medium tracking-wide">Listeners:</span>
+        <span id="visitorCountBadge" class="font-mono font-extrabold text-base sm:text-lg text-white tracking-wider">742</span>
+      </div>
+
+      <!-- Live Mood / Theme Selector -->
+      <div class="relative">
+        <button id="genreDropdownBtn" class="glass-pill px-5 py-2.5 rounded-full text-sm sm:text-base font-semibold text-white flex items-center gap-2.5 hover:border-amber-300/60 transition shadow-lg">
+          <span class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse"></span>
+          <span id="currentGenreLabel">सभी मिजाज़ (All Moods)</span>
+          <svg class="w-4 h-4 opacity-85 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+        </button>
+
+        <!-- Dropdown Menu -->
+        <div id="genreMenu" class="hidden absolute right-0 sm:left-0 mt-2 w-64 glass-card rounded-2xl p-2.5 z-50 shadow-2xl max-h-80 overflow-y-auto border border-white/15">
+          <div class="text-xs font-semibold text-amber-200/80 uppercase px-3 py-1.5 tracking-wider">अपना मिजाज़ चुनें (Select Mood)</div>
+          <button onclick="selectGenre('All')" class="w-full text-left px-3.5 py-2.5 text-sm rounded-xl hover:bg-white/15 flex items-center justify-between text-white font-medium transition">
+            <span>✨ सभी मिजाज़ (All Moods)</span>
+          </button>
+          <div class="my-1 border-t border-white/10"></div>
+          <div id="genreMenuList" class="space-y-0.5"></div>
+        </div>
+      </div>
+
+      <!-- Ambient Sound Toggle -->
+      <button id="ambientBtn" onclick="toggleAmbientSound()" class="glass-pill px-4 py-2.5 rounded-full text-sm sm:text-base font-medium text-zinc-100 hover:text-amber-200 hover:border-amber-300/50 transition flex items-center gap-2 shadow-lg" title="माहौल की धीमी आवाज (Rain/Breeze)">
+        <span id="ambientIcon" class="text-base">🌧️</span>
+        <span class="hidden md:inline" id="ambientStatus">Ambient: Off</span>
+      </button>
+
+      <!-- Share Button -->
+      <button onclick="toggleShareModal()" class="glass-pill px-4 py-2.5 rounded-full text-sm sm:text-base font-medium text-amber-100 hover:text-white hover:border-amber-300/60 transition flex items-center gap-2 shadow-lg" title="दोस्तों के साथ सुरमई शेयर करें">
+        <span class="text-base">🔗</span>
+        <span>Share</span>
+      </button>
+
+      <!-- Feedback Corner Button -->
+      <button onclick="toggleFeedbackModal()" class="glass-pill px-4 py-2.5 rounded-full text-sm sm:text-base font-medium text-sky-100 hover:text-white hover:border-sky-300/60 transition flex items-center gap-2 shadow-lg" title="अपनी राय और पसंदीदा गीत सुझाएं">
+        <span class="text-base">💬</span>
+        <span>Feedback</span>
+      </button>
+
+      <!-- Support Window Button -->
+      <button onclick="toggleSupportModal()" class="glass-pill px-4 py-2.5 rounded-full text-sm sm:text-base font-semibold text-rose-100 hover:text-white hover:border-rose-400/60 bg-rose-500/25 transition flex items-center gap-2 shadow-lg" title="सुरमई को सपोर्ट करें">
+        <span class="text-rose-300 text-base">❤️</span>
+        <span>Support</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Center Stage: Translucent Compact Console so Mobile Scenic Visuals Stay Vivid & Visible -->
+  <main class="relative z-10 flex-1 flex flex-col items-center justify-end sm:justify-center px-3 sm:px-6 pt-12 sm:py-6 pb-3 sm:pb-6 gap-3.5 sm:gap-6">
+
+    <!-- 1. CLASSY VINTAGE GRAMOPHONE & LUXURY AUDIO CONSOLE -->
+    <div class="w-full max-w-2xl classy-player-shell rounded-3xl sm:rounded-[32px] p-4 sm:p-8 relative overflow-hidden transition-all duration-500">
+      <!-- Subtle Warm Amber Corner Glow -->
+      <div class="pointer-events-none absolute -top-24 -left-24 w-56 h-56 rounded-full bg-amber-400/10 blur-3xl"></div>
+      <div class="pointer-events-none absolute -bottom-24 -right-24 w-56 h-56 rounded-full bg-rose-500/10 blur-3xl"></div>
+
+      <!-- Top Console Bar: Live Equalizer + Current Song Mood Pill -->
+      <div class="relative flex items-center justify-between gap-2 pb-2.5 sm:pb-4 mb-3 sm:mb-5 border-b border-amber-200/15">
+        <div class="flex items-center gap-2 sm:gap-3">
+          <!-- Animated 5-Bar Equalizer -->
+          <div id="eqVisualizer" class="flex items-end gap-[3px] h-4 sm:h-5 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-black/40 border border-amber-300/25">
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+          </div>
+          <span id="playerStatusText" class="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-amber-200/90 font-semibold">
+            Ready to Spin
+          </span>
+        </div>
+
+        <!-- Current Track's Poetic Mood Tag -->
+        <div id="trackMoodPill" class="px-3 py-0.5 sm:px-3.5 sm:py-1 rounded-full bg-amber-400/15 border border-amber-300/35 text-[11px] sm:text-xs text-amber-200 font-medium tracking-wide shadow-sm">
+          फ़लसफ़ा (Falsafa)
+        </div>
+      </div>
+
+      <!-- Main Turntable & Track Details Row (Compact Horizontal on Mobile so Scene Stays Open!) -->
+      <div class="relative flex flex-row items-center gap-3.5 sm:gap-8">
+        
+        <!-- Realistic Vinyl Platter + Animated Gramophone Tonearm -->
+        <div class="relative w-24 h-24 sm:w-36 sm:h-36 flex-shrink-0 flex items-center justify-center select-none">
+          <!-- Outer Brushed Brass Ring -->
+          <div class="absolute inset-0 rounded-full border border-amber-300/30 shadow-[0_0_30px_rgba(251,191,36,0.18)]"></div>
+          
+          <!-- Spinning Grooved Vinyl Record -->
+          <div id="vinylIcon" class="w-20 h-20 sm:w-32 sm:h-32 rounded-full turntable-platter vinyl-spin vinyl-pause relative flex items-center justify-center overflow-hidden">
+            <!-- Light Reflection Sheen -->
+            <div class="absolute inset-0 vinyl-sheen pointer-events-none"></div>
+            <!-- Inner Groove Ring -->
+            <div class="w-14 h-14 sm:w-20 sm:h-20 rounded-full border border-white/10 flex items-center justify-center">
+              <!-- Vintage Gold & Crimson Center Label -->
+              <div class="w-8 h-8 sm:w-11 sm:h-11 rounded-full bg-gradient-to-br from-amber-300 via-amber-500 to-amber-700 border border-amber-100/80 shadow-inner flex flex-col items-center justify-center text-center">
+                <span class="font-hindi text-[9px] sm:text-[11px] text-zinc-950 leading-none font-bold">सु</span>
+                <div class="w-1.5 h-1.5 sm:w-2.5 sm:h-2.5 rounded-full bg-zinc-950 border border-amber-200/60 mt-0.5"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Classic Metallic Tonearm (Swings onto vinyl when playing) -->
+          <svg id="toneArmSvg" class="tonearm absolute -top-1 -right-1.5 sm:-right-2 w-12 h-16 sm:w-16 sm:h-24 pointer-events-none drop-shadow-[0_4px_8px_rgba(0,0,0,0.85)]" viewBox="0 0 64 96" fill="none">
+            <circle cx="50" cy="16" r="9" fill="#27272a" stroke="#fbbf24" stroke-width="1.5"/>
+            <circle cx="50" cy="16" r="4" fill="#fde68a"/>
+            <path d="M50 16 L36 62 L24 76" stroke="url(#armGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="17" y="73" width="11" height="6" rx="1.5" transform="rotate(-38 17 73)" fill="#fbbf24" stroke="#18181b" stroke-width="1"/>
+            <defs>
+              <linearGradient id="armGrad" x1="50" y1="16" x2="22" y2="78" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#fde68a"/>
+                <stop offset="0.5" stop-color="#d4d4d8"/>
+                <stop offset="1" stop-color="#f59e0b"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <!-- Track Title, Singer & Tactile Luxury Controls -->
+        <div class="flex-1 text-left min-w-0">
+          <h4 id="playerTrackTitle" class="text-lg sm:text-2xl md:text-[26px] font-hindi tracking-wide text-white truncate drop-shadow">
+            Aage Bhi Jaane Na Tu
+          </h4>
+          <p id="playerTrackSub" class="text-[11px] sm:text-sm text-amber-100/90 truncate mt-0.5 sm:mt-1 font-medium">
+            Asha Bhosle • Waqt (1965)
+          </p>
+
+          <!-- Tactile Metallic & Gold Controls Row -->
+          <div class="mt-3 sm:mt-5 flex items-center justify-start gap-2.5 sm:gap-4">
+            <!-- Previous -->
+            <button onclick="playPrev()" class="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-white/[0.08] hover:bg-amber-400/20 border border-white/15 hover:border-amber-300/50 text-zinc-100 hover:text-amber-200 flex items-center justify-center transition-all active:scale-95 shadow-md" title="पिछला गीत (Previous)">
+              <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+            </button>
+            
+            <!-- Grand Play / Pause Button -->
+            <button id="mainPlayBtn" onclick="togglePlay()" class="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-amber-300 via-amber-400 to-amber-500 text-zinc-950 flex items-center justify-center shadow-[0_0_30px_rgba(251,191,36,0.48)] border-2 border-amber-100/70 hover:scale-105 active:scale-95 transition-all" title="Play / Pause">
+              <svg id="playIconSvg" class="w-6 h-6 sm:w-7 sm:h-7 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+
+            <!-- Next -->
+            <button onclick="playNext()" class="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-white/[0.08] hover:bg-amber-400/20 border border-white/15 hover:border-amber-300/50 text-zinc-100 hover:text-amber-200 flex items-center justify-center transition-all active:scale-95 shadow-md" title="अगला गीत (Next)">
+              <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
+            </button>
+
+            <!-- Shuffle -->
+            <button id="shuffleBtn" onclick="toggleShuffle()" class="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-white/[0.06] hover:bg-white/15 border border-white/10 text-amber-300 flex items-center justify-center transition-all" title="Shuffle Mode">
+              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H4a2 2 0 01-2-2V6a2 2 0 012-2h4m8 16h4a2 2 0 002-2v-4a2 2 0 00-2-2h-4m0-8h4a2 2 0 012 2v4a2 2 0 01-2 2h-4M4 16l4-4m0 0l-4-4m4 4H2"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Luxury Golden Scrubber Progress Bar with Glowing Playhead -->
+      <div class="mt-4 sm:mt-6 pt-3 sm:pt-4 border-t border-amber-200/15 w-full flex items-center gap-2.5 sm:gap-3.5 text-[11px] sm:text-xs text-amber-100/90 font-mono">
+        <span id="currentTimeText" class="w-9 sm:w-10 text-right">0:00</span>
+        <div class="flex-1 relative cursor-pointer py-1.5 sm:py-2 group" onclick="seekTrack(event)" id="progressBarContainer">
+          <div class="w-full h-1.5 sm:h-2 bg-white/15 rounded-full overflow-visible relative shadow-inner">
+            <div id="progressBarFill" class="h-full bg-gradient-to-r from-amber-600 via-amber-400 to-amber-200 w-0 rounded-full relative transition-all duration-100">
+              <span class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-3 h-3 sm:w-3.5 sm:h-3.5 rounded-full bg-amber-200 border-2 border-amber-600 shadow-[0_0_12px_rgba(251,191,36,0.95)] group-hover:scale-125 transition-transform"></span>
+            </div>
+          </div>
+        </div>
+        <span id="durationTimeText" class="w-9 sm:w-10">0:00</span>
+      </div>
+    </div>
+
+    <!-- 2. POETIC DESCRIPTION & CREDITS CARD DIRECTLY UNDER PLAYER (Same Font Size) -->
+    <div class="w-full max-w-2xl glass-card rounded-3xl p-4 sm:p-8 relative text-center group border border-white/15 hover:border-amber-300/30 transition-all duration-500 shadow-2xl">
+      <!-- Decorative Quote Mark -->
+      <div class="text-2xl sm:text-3xl text-amber-300/60 font-serif leading-none select-none mb-1 sm:mb-1.5">“</div>
+      
+      <!-- Bilingual Description (Exact same font size: text-base md:text-lg) -->
+      <p id="poeticSoulText" class="text-base md:text-lg text-white font-light leading-relaxed tracking-wide min-h-[54px] sm:min-h-[64px] flex items-center justify-center transition-opacity duration-300 drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]">
+        वक्त के बहते दरिया में ठहरकर सिर्फ इस पल को जी लेने का सुकून। कल की कोई फिक्र नहीं, बस अभी की सांसों में एक इत्मीनान है।
+      </p>
+
+      <!-- Language Toggle & Film/Composer/Lyricist Credits Footnote -->
+      <div class="mt-3.5 sm:mt-5 pt-3 sm:pt-4 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between gap-2.5 sm:gap-3 text-xs text-zinc-100">
+        <div class="flex flex-wrap items-center justify-center sm:justify-start gap-1.5 text-center sm:text-left">
+          <span class="text-amber-300 font-medium" id="filmBadge">Waqt (1965)</span>
+          <span class="text-zinc-400">•</span>
+          <span id="singersBadge" class="text-zinc-100">Asha Bhosle</span>
+          <span class="text-zinc-400 hidden sm:inline">•</span>
+          <span id="creditsExtraBadge" class="text-zinc-200/90">Music: Ravi | Lyrics: Sahir Ludhianvi</span>
+        </div>
+        
+        <button onclick="toggleLang()" class="px-3.5 py-1 rounded-full text-[11px] bg-white/15 hover:bg-white/25 text-amber-200 border border-white/20 transition flex-shrink-0">
+          <span id="langBtnText">EN / हिन्दी</span>
+        </button>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Subtle Bottom Disclaimer Footer -->
+  <footer class="relative z-20 w-full pb-5 pt-2 px-4 sm:px-6 flex flex-col items-center">
+    <p class="max-w-3xl text-center text-[11px] leading-relaxed text-zinc-300/80 px-3 drop-shadow">
+      Disclaimer: Audio plays through YouTube's embedded player. Nothing is hosted on this site, and all rights stay with the labels, composers and performers. Song credits are put together from film soundtrack listings.
+    </p>
+  </footer>
+
+  <!-- 1. Support / Contribution Modal Window (QR Code Only - No Name Displayed) -->
+  <div id="supportModalBackdrop" onclick="toggleSupportModal()" class="fixed inset-0 bg-black/70 z-50 hidden backdrop-blur-md transition-opacity flex items-center justify-center p-4">
+    <div onclick="event.stopPropagation()" class="relative w-full max-w-md rounded-3xl p-7 md:p-8 text-center shadow-2xl border border-rose-400/25" style="background: linear-gradient(160deg, rgba(48, 18, 28, 0.94) 0%, rgba(18, 14, 22, 0.97) 100%); backdrop-filter: blur(28px);">
+      
+      <!-- Close Button -->
+      <button onclick="toggleSupportModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-zinc-200 hover:text-white flex items-center justify-center transition" title="बंद करें">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+
+      <!-- Top Heart Badge -->
+      <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-rose-500/20 border border-rose-400/35 flex items-center justify-center shadow-lg">
+        <span class="text-2xl animate-pulse">🩷</span>
+      </div>
+
+      <!-- Heading -->
+      <h3 class="text-xl md:text-2xl font-hindi text-white tracking-wide leading-snug mb-3">
+        सुरमई को हमेशा निःशुल्क बनाए रखने में साथ दें
+      </h3>
+
+      <!-- Heartfelt Message -->
+      <p class="text-xs md:text-sm text-zinc-200 font-light leading-relaxed mb-6 px-1">
+        “अगर <span class="text-amber-300 font-medium">सुरमई (Surmayi)</span> ने आपके दिल के किसी कोने को छुआ है, या किसी पुरानी भूली-बिसरी याद को ताज़ा किया है, तो मेरा यह प्रयास सफल है।<br><br>
+        विज़िटर्स लगातार बढ़ रहे हैं और वेबसाइट को बिना किसी विज्ञापन (Ad-free) के स्मूद बनाए रखने का सर्वर व मेंटेनेंस खर्च काफ़ी ज़्यादा है। आपसे जो भी सहयोग बन पड़े, ज़रूर करें—ताकि हम इस सुकून भरे सफ़र को और भी बेहतर बना सकें।” <span class="text-rose-400">❤️</span>
+      </p>
+
+      <!-- Clean QR Code Card (Only QR Code, no personal name) -->
+      <div class="w-52 mx-auto bg-white rounded-2xl p-3.5 shadow-xl flex flex-col items-center justify-center relative mb-5 border-2 border-rose-400/30">
+        <img id="upiQrImg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAIAAAAI7H7bAAAM3klEQVR42u3d23EjORKFYU4HDdBLu7B2jWlj17jQL/JA+6AIDYOiQFwyAVTx+592p8W6oHAKebKAxF8fHx8XAGP80gQAIQGEBBASAEICCAkgJICQADzgWvi3t7ffcy7i/f1P1ElvD9V0O3c/bLqMvN8WbufpDUZdVVO7BfaikXuf0FGNSIDQDiAkgJAAdCUbRsxfni8s++CC4Y66/tZDlU1/uTVG8hZRGYLvf3z7r0+vsPC8mlpmpM0ndFcjEiC0AwgJICQAXcmGESs8Yv6inH35OIGmuXyiqMkKIzmbppudxshUjOUd9deEi8OEbofJkhPaATwSQEgdEcv8L2vbxlFiudMmG5b0mCSTPdJNm77B108auIzlLaISFd//uDtf0n3Bl7GJDkI71hZCO4CQABAS1jjY8533wMmG+gZtWkbR5E9G5i40/TZwGUW553WXXhi52VhPuLOWXndE2rC2BoR2ACEBICTgwMmGJOc3OMO/Prvw/v4n6Qv9iL8KrAjZdJbui3x60u58zyo/bEQChHYAIQGEBGBismHVR8mmMgzd/vvpDwu3PzL/f2SCRfcdPV0ZUd/IT2+nu0DkSFPM76tGJICQAEICCOnwHG4e6ovXbDjwMopNLj2qxw/mD+pN86res8OrIXVmRvdaDyOS4QtCO9oAIYm5gRiPFPhGH6lR1lSQrfs73aoN4fLGyWlr2guHClyi332RTdsTdh9qwYi0quKpWG7+w12yo8SS5y7ZABASQEgAIQG5njbvUBlc611aVKHD1BaJsqTTNqcod5fABRqByc+kdsvTUmCG2YgECO0AQgIICcBz/vr4+Jhg+uudbuCEjhHT3HSokVIEUX76EjTVpfVETc8rcFVIXlamr62MSIDQDiAk4DRk7djXtCo4aj5463He3n6/v//5/FWfbfg8Qvc1p05MLrTM7WXX38JXQ/30BG8b87Ztux9KTct//o+Ht1C44EDHmJtsaHKcgea1u4zgnj54JNkQZambaj6OJDny9vnMa3OhHcAjAYQEEBKyrONC1IEZ5xr1mEfm8DfVXoyaS5+39WXgngvlG+/WYdOhAvfJDFxgEph7CHnuu49IKpZoCqEdQEgAdhbSEa2tsAr9yYa85QAjRy6bv7wtHJe8VvLavL7dBq+hfsuPkZZJ3QVDaAfwSAAhAS9Fafb3yIbsgf5q5Fth4BL3qJsNXOcctblG081eQqeKJz2gvJ58mBHJdJWk3r8hZ3rWQjuAkABCAggJr+JkmNgawvaQrW/fVQmlpr8cTFUVfpgnnqRqmEs2fr1kzvlo2mbFiAQI7QBCAnikGDMTtdS8NYwunHdazF3/2xGPl+qvAo1c0uYDedO9TzKz4aWQARPaASAkgJCA3Qgroh+1fDcwFXEZWJER+EF25ArnrLmY6eWSdh6Zk6g4cF27wCeqgMlpVCS0A3gkAIQE7C4k9gMvTkPxkyjD2ppRCSwFWH+cvNqFeSVlluzzGZgwGLnZaRcptAN4JICQgNNzTTpuUzH7wJi1PlZutV7dEyymbVWfV2Bx5LCFevyBO/Yt/1xrRAIICSAkgJAAEFKyw36dmzWp5ZNrd4NOq/gxZ/OSaVrK2Hex9QG1PoLykZs2I+1uqGlqN7MBENoh+iWNTUM7rFLL+/ufr/9IS3vSP/s7sMreJkXo57ipn66/LzSPMpBJpe7z3OMmf2xE2ldpfb81UvFILy2hqDe6oq2EZCB6wt//+2eyLHG2ZMPJesZnAPbTTRUE89M//fPv3w9b7O3t99vbb7raItlQbw0H92lb8rxHak323V1BRZVjzk98l9Ml7UP2tBRU3tPsXsReuOBr1G0c7uV3m1NeOBYNSuj2IHdySrrBye0mtMOTF02IhMpy0uklG87mi7JV9NOR2SRCOk/O4+7neSrax4JKNsywdyNpjPnXEG6pnwrpKzzrltz39EPZx0YVlggsQrjho09PNuQFQkfP4baORXcC+Py/HXJ6mH7oa8wRl/U6KXih3Txq9PDwbx5mt1vP+PV9yYMgpAMPR/WjSqyWvl8PLRHSq+QnArMRknjrkw2bFDUfMfpzzvLw3vuGo/IoFJJ7eOhbooz+IbZUzJjZYETabjgqyCYqwBPdCe3OmWPI1tLkL1eEhF2Go1sN3MkgZFwyKBHSqwxHheOEaImoArl2N3fgVgJ5D7W7nl73zTZ9ghzRw91vOxRbWfgudRuI+rxF0saNURHE645Iq7Z/PF/waSQU2p0k8JNvIKRT0fGK1b9fziMhdayo+fw67ouwXkhRcxdaK7g3+eDCofJs8Qli/SWl7gMnqQSWgOzLagjtAB5p71f7bqHX91UVIKQD5BtiP5uOczd11cM6tpAO8S70wkZWsiEwFRE1K+Jp3mJkwv+q2Ri7javllnlqzeuTNOVUxJweJbQDeCT4KERImJAbuAynLnbLfPBIWKalORYIuUIarG8W9dtbpxhYe2Bk3kb3RhXfo7tV40ZTVqZpkkfSXJOkHiW024W7igitwvi+HhY8EiC0Q5zPaR1k6vfnk2kwIi0m1XDv7OZlGrYekeofT6u3C9zVcOQshYzCw9/eFm/oGJQCx8OOBqlPnwQmDAKLQwS+LBSIBIR2p4sed3ApgjpCOknWYVBOTfHh3em+VGRi+9YeaQ6H6wTfy9wN+qXK3/6kWCpKon83iu4/bg0worZPbDLNI3/8/aST95B9uO/l/q/FjFIKHU9TaLfvEHr3ICf7JdZIaHeqxMPtm697c9jWcI6KJBtOqKVKJ2MsMiKhOfcwPjQZi46UbBgxjoHebuSqkrpaR3WH8k+e6qo8lD08S/0GE6sGvcC9VfPqPRiRdsk9fD7U8u4v30sT1weBvhfxSK9umfrGn9sDCucI6UW1FNX1SWhfj1R+TkmzcZsWNudFLyP9svUW+j41ttb06y5G13Q7l4F6gHnObWQye6W3vNZ3Du+8JE3efbR9qJBUu9y0XWfrS2RbmxrbFJINGz3gy89Lm47bcV8EQjqAuiDZABAS0G75XpP+ZRR5k96X9IC8YoWBH+xHwsI5JS+bsl6Bk1QCxd93IiMSILQDCAkgJAD/cY1yyfWOLdD0B07kaSoQGeiDAy8y6TJapwgFnqj+0a9KYxiRAKEdQEjAa3mk+iA1cHP2wRn+3YaqKcgeqfgX+K+Bpqj7UE/brWn5RtTzSvp6m15EP2/aiAkpENoBhASAkABCWs+drTz3ArtVm+GdiWtU69fnWAbrqEx7qHOmMkxbZJHUyE8vqXsZRdTuJ63X3NfmRiRAaAcQEnAa+ovoJ5XzizW+UUX0A4vx563Yrz/U0wndgUvN11qXae7rdUekpichVQVCSh9RAR4JICSAkA7kkZIyK9Os192JWL5wwgpElnte0jfs1q1NRpTTXck+r9fOySUGLglr6mBNtxOVz7woEAkI7QBCAghJEwDjli9sitC0/UC7G2LQ2kbd0W7z/zuadEnSLzCdkPFkjUiA0A4gpLX4KIlAGpaaB5ZQjJq0H2iEngbKgd92o65/jhNYNQUkz2p2f/lNLxBpKIDQDgAhAYQEvFyyod7AjbjeVYv+W51b/XUGTj0eydk01WwIseZ3f/DwOJXN3tor8soDTh2RVq3iDkzd7HmDh77CsrZHXpFCO4BHAkBIQCBZs7/nBPfTKjNOMyRzXHLgNI6mQwWuGMibRN/3cNW1A4R2ACEBhASgLtkwkntYQuv68CTvHliBLe9EUf47L2GQV/WuexXPXssoNskfWM2BwPFAaAfwSCvePQAhAauTDfWWo/XD+cgmjVFpgKd/GVUxL8+qdd/siFmvf9bjIcCS2TMrR6Smuijlfw3sZ7ILa7tdbFkboR3AIwEgJGD3ZMMmTqbb6I8kGwJvMG8pQdKciVV7AuRNoeh7OkoWA0K7WWMXQEhGJBCSEQlH4LrDO/u2T+f175HPxCMuv96pl08UWyQx6vZHVnYEluzM25zCiHS2UVEsKrQDCAkAIQGLkw0ZnuySPAu4cJGDKzK6HfY0E7XE2j299/ppEIEzMwI7mAKRvDuEdnNfqwAhGZFASEYknOL12rAbRdR+DeUVCnnf45uEFFjkcVpmonyRTZUwmtIJUa+nHVqm+45+nfUNAQjtAEICCAlAB9fDXXGg9x2pFxmVXQjcgqH+vE8rUiRNI1iVt5hwd0ak9Ic6/7AQ2m06sp34GkBIRgMQEiDZcJTsQjmdUL/BRF5IFlhsYGSPj7ynU7+wpalmQ14lSiMSILQDCAkgpBdF6hmB9C+jCOzB07YwGCHp9qfNbJiZYMho8LzbCen2QjtAaAcQEkBIAP6jYWbDqjRX/WKHS1ztgVWMVJIYucGmdmuaETJnzcXyrJIRCRDaAYQEnIbSB1kARiSAkABCAggJACEBhAQQEkBIAAb4P7GMMMtsgIj3AAAAAElFTkSuQmCC" alt="UPI QR Code" class="w-44 h-44 object-contain rounded-lg">
+        <div class="mt-1.5 flex items-center gap-1.5 text-[10px] font-bold tracking-wider text-zinc-600">
+          <span>UPI</span>
+          <span class="text-zinc-400">•</span>
+          <span class="text-purple-700">PhonePe</span>
+          <span class="text-blue-600">GPay</span>
+          <span class="text-sky-500">Paytm</span>
+        </div>
+      </div>
+
+      <!-- Action Button: Download QR Code -->
+      <div class="flex items-center justify-center mb-3">
+        <button onclick="downloadSupportQR()" class="px-6 py-2.5 rounded-full bg-rose-500 hover:bg-rose-400 text-white text-xs font-semibold shadow-lg shadow-rose-500/25 flex items-center justify-center gap-2 transition active:scale-95">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+          <span>Download QR Code</span>
+        </button>
+      </div>
+
+      <p class="text-[11px] text-zinc-300/80">
+        Save it and scan with any UPI app (GPay / PhonePe / Paytm).
+      </p>
+    </div>
+  </div>
+
+  <!-- 2. Feedback Corner Modal Window -->
+  <div id="feedbackModalBackdrop" onclick="toggleFeedbackModal()" class="fixed inset-0 bg-black/70 z-50 hidden backdrop-blur-md transition-opacity flex items-center justify-center p-4">
+    <div onclick="event.stopPropagation()" class="relative w-full max-w-lg rounded-3xl p-6 md:p-8 shadow-2xl border border-sky-400/25" style="background: linear-gradient(160deg, rgba(18, 26, 40, 0.95) 0%, rgba(12, 16, 24, 0.98) 100%); backdrop-filter: blur(28px);">
+      
+      <!-- Close Button -->
+      <button onclick="toggleFeedbackModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-zinc-200 hover:text-white flex items-center justify-center transition">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-full bg-sky-500/20 border border-sky-400/30 flex items-center justify-center text-lg">💬</div>
+        <div>
+          <h3 class="text-xl font-hindi text-white tracking-wide">सुरमई Feedback Corner</h3>
+          <p class="text-xs text-zinc-300">आपकी पसंद और सुझाव इस महफ़िल को और खूबसूरत बनाएंगे</p>
+        </div>
+      </div>
+
+      <form id="feedbackForm" onsubmit="submitFeedback(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-medium text-amber-200 mb-1">1. इस संग्रह में आपको सबसे बेहतरीन गीत (Best Song) कौन सा लगा?</label>
+          <input type="text" id="fbBestSong" required placeholder="जैसे: Dil Dhoondhta Hai, Kun Faya Kun, या जो अभी बज रहा है..." class="w-full bg-white/10 border border-white/15 rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-zinc-400 focus:outline-none focus:border-amber-300">
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-amber-200 mb-1">2. आपके हिसाब से कौन सा गीत इसमें ज़रूर शामिल होना चाहिए था?</label>
+          <input type="text" id="fbSuggestSong" placeholder="अपने पसंदीदा गीत या ग़ज़ल का नाम लिखें..." class="w-full bg-white/10 border border-white/15 rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-zinc-400 focus:outline-none focus:border-amber-300">
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-amber-200 mb-1">3. वेबसाइट में और क्या सुधार (Improvement) होना चाहिए?</label>
+          <textarea id="fbImprove" rows="3" placeholder="Visuals, आवाज, नए मिजाज़ (Moods) या किसी भी फीचर पर अपनी राय दें..." class="w-full bg-white/10 border border-white/15 rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-zinc-400 focus:outline-none focus:border-amber-300"></textarea>
+        </div>
+
+        <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-2.5">
+          <span id="fbSuccessMsg" class="text-xs text-emerald-300 hidden">✅ शुक्रिया! आपका सुझाव तैयार है।</span>
+          <div class="w-full sm:w-auto ml-auto flex flex-col sm:flex-row items-center gap-2">
+            <button type="button" onclick="sendFeedbackViaWhatsApp()" class="w-full sm:w-auto px-4 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold shadow-lg transition active:scale-95 flex items-center justify-center gap-1.5">
+              <span>📲</span>
+              <span>Send via WhatsApp</span>
+            </button>
+            <button type="submit" class="w-full sm:w-auto px-5 py-2.5 rounded-full bg-amber-400 hover:bg-amber-300 text-black text-xs font-semibold shadow-lg transition active:scale-95">
+              ✉️ Send via Email
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 3. Share Modal Window (URL Copy + Bilingual Hindi/English Message) -->
+  <div id="shareModalBackdrop" onclick="toggleShareModal()" class="fixed inset-0 bg-black/70 z-50 hidden backdrop-blur-md transition-opacity flex items-center justify-center p-4">
+    <div onclick="event.stopPropagation()" class="relative w-full max-w-lg rounded-3xl p-6 md:p-8 shadow-2xl border border-amber-300/25" style="background: linear-gradient(160deg, rgba(28, 24, 18, 0.95) 0%, rgba(14, 15, 20, 0.98) 100%); backdrop-filter: blur(28px);">
+      
+      <!-- Close Button -->
+      <button onclick="toggleShareModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-zinc-200 hover:text-white flex items-center justify-center transition">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-full bg-amber-400/20 border border-amber-300/35 flex items-center justify-center text-lg">🔗</div>
+        <div>
+          <h3 class="text-xl font-hindi text-white tracking-wide">सुरमई को अपनों के साथ बाँटें</h3>
+          <p class="text-xs text-zinc-300">सुकून और यादों का यह कारवाँ आगे बढ़ाएं</p>
+        </div>
+      </div>
+
+      <!-- Website URL Copy Box -->
+      <div class="mb-4">
+        <label class="block text-[11px] text-zinc-400 uppercase tracking-wider mb-1.5">Website Link (URL)</label>
+        <div class="flex items-center gap-2 bg-black/40 border border-white/15 rounded-xl p-1.5 pl-3">
+          <input type="text" id="shareUrlInput" readonly class="bg-transparent text-xs text-amber-200 flex-1 focus:outline-none truncate font-mono">
+          <button onclick="copyShareUrl()" id="copyUrlBtn" class="px-3.5 py-1.5 rounded-lg bg-amber-400 hover:bg-amber-300 text-black text-xs font-semibold transition flex-shrink-0">
+            Copy URL
+          </button>
+        </div>
+      </div>
+
+      <!-- Bilingual Hindi + English Share Message Box -->
+      <div class="mb-5">
+        <div class="flex items-center justify-between mb-1.5">
+          <label class="text-[11px] text-zinc-400 uppercase tracking-wider">WhatsApp / Social Share Message (हिन्दी + English)</label>
+          <button onclick="copyShareMessage()" id="copyMsgBtn" class="text-[11px] text-amber-300 hover:text-amber-200 underline">
+            Copy Full Message
+          </button>
+        </div>
+        <textarea id="shareMessageText" rows="6" readonly class="w-full bg-white/5 border border-white/15 rounded-xl p-3.5 text-xs text-zinc-100 leading-relaxed focus:outline-none resize-none"></textarea>
+      </div>
+
+      <!-- Direct WhatsApp & Copy Buttons -->
+      <div class="flex flex-col sm:flex-row items-center gap-2.5">
+        <button onclick="shareOnWhatsApp()" class="w-full sm:flex-1 py-2.5 px-4 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold flex items-center justify-center gap-2 shadow-lg transition">
+          <span>📲</span>
+          <span>WhatsApp पर शेयर करें</span>
+        </button>
+        <button onclick="copyShareMessage()" id="copyMsgMainBtn" class="w-full sm:w-auto py-2.5 px-5 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-medium border border-white/15 transition">
+          📋 Copy Message & Link
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Master Script & YouTube IFrame API Logic -->
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script>
+    // Embedded Master Songs Catalog
+    const ALL_SONGS = [{"id": 1, "title": "Aage Bhi Jaane Na Tu", "category": "फ़लसफ़ा (Falsafa)", "film": "Waqt", "year": 1965, "singers": "Asha Bhosle", "composer": "Ravi", "lyricist": "Sahir Ludhianvi", "desc_hi": "वक्त के बहते दरिया में ठहरकर सिर्फ इस पल को जी लेने का सुकून। कल की कोई फिक्र नहीं, बस अभी की सांसों में एक इत्मीनान है।", "desc_en": "A tranquil surrender to the living second, where anxieties of tomorrow gently dissolve into the hush of right now.", "yt_id": "LwFk-3PQfcM"}, {"id": 2, "title": "Aaj Jaane Ki Zid Na Karo", "category": "अरमान (Armaan)", "film": "Ae Dil Hai Mushkil", "year": 2016, "singers": "Arijit Singh", "composer": "Pritam / Sohail Rana", "lyricist": "Fayyaz Hashmi", "desc_hi": "रात के आखिरी पहर में किसी का हाथ थामकर वक्त को रोक लेने की भीगी हुई इल्तिज़ा। जब विदाई का ख्याल ही सीने में सिहरन भर दे।", "desc_en": "A fragile midnight plea to pause the dawn, clinging to lingering warmth before separation steals the room.", "yt_id": "W83ggCcHIQo"}, {"id": 3, "title": "Aajkal Paon Zameen Par Nahi Padte Mere", "category": "इश्क़ (Ishq)", "film": "Ghar", "year": 1978, "singers": "Lata Mangeshkar", "composer": "R. D. Burman", "lyricist": "Gulzar", "desc_hi": "जब मोहब्बत में दिल इतना हल्का हो जाए कि कदम जमीन पर टिकना भूल जाएं। खिली हुई धूप और हवा में तैरते ख्वाबों की सरगोशी।", "desc_en": "The weightless intoxication of pure affection, where gravity loosens and the heart floats above the clouds.", "yt_id": "h8XlD8mXKmI"}, {"id": 4, "title": "Aaoge Jab Tum Saajna", "category": "अरमान (Armaan)", "film": "Jab We Met", "year": 2007, "singers": "Ustad Rashid Khan", "composer": "Sandesh Shandilya", "lyricist": "Irshad Kamil", "desc_hi": "बारिश से भीगी ढलती शाम और देहरी पर बैठी आंखों का अंतहीन इंतजार। विरह की ऐसी तड़प जो सन्नाटे में चुपचाप इबादत बन जाती है।", "desc_en": "Rain-drenched dusk and the aching grace of an unbroken vigil, where patient waiting turns into sacred quietude.", "yt_id": "CNZMIhckaA0"}, {"id": 5, "title": "Aapki Aankhon Mein Kuch Mehke Hue Se", "category": "इश्क़ (Ishq)", "film": "Ghar", "year": 1978, "singers": "Kishore Kumar, Lata Mangeshkar", "composer": "R. D. Burman", "lyricist": "Gulzar", "desc_hi": "कांच जैसी खामोशी के बीच दो नज़रों का आपस में टकराना और बिन कहे सब कह देना। एक मखमली रात और महकती सांसों की दास्तान।", "desc_en": "Velvet shadows and unspoken confessions, where a single lingering glance says more than a lifetime of words.", "yt_id": "qn3WEdLtp-g"}, {"id": 6, "title": "Ae Ajnabi Tu Bhi Kabhi", "category": "रवानगी (Rawaangi)", "film": "Dil Se..", "year": 1998, "singers": "Udit Narayan, Mahalaxmi Iyer", "composer": "A. R. Rahman", "lyricist": "Gulzar", "desc_hi": "सरहदों और दूरियों के पार अंधेरे में तैरती एक बेचैन, अनजानी पुकार। जैसे कोई अपना बहुत दूर होकर भी रूह के सबसे पास धड़क रहा हो।", "desc_en": "A haunting echo cutting through vast darkness, reaching for a soul that feels impossibly distant yet profoundly near.", "yt_id": "TdUu05Svkl8"}, {"id": 7, "title": "Ae Dile Nadaan Aarzoo Kya Hai", "category": "रवानगी (Rawaangi)", "film": "Razia Sultan", "year": 1983, "singers": "Lata Mangeshkar", "composer": "Khayyam", "lyricist": "Jan Nisar Akhtar", "desc_hi": "रेगिस्तान का अंतहीन सन्नाटा, जलती मशालें और खुद के वजूद से उलझती एक तन्हा रूह। जब ज़िंदगी ही एक अनसुलझा सवाल बन जाए।", "desc_en": "Echoes of an existential desert stillness, wandering through quiet horizons in search of an elusive truth.", "yt_id": "-cSEGrYJPhM"}, {"id": 8, "title": "Ae Hawa Kuch To Bata", "category": "यादें (Yaadein)", "film": "Maachis", "year": 1996, "singers": "Lata Mangeshkar", "composer": "Vishal Bhardwaj", "lyricist": "Gulzar", "desc_hi": "सर्द वादियों की ठंडी हवा और खंडहर हो चुके आशियानों से आती गुज़रे वक्त की महक। मिट्टी की नमी में दबी पुरानी यादों की सिसकी।", "desc_en": "Chilly mountain winds carrying the scent of abandoned hearths and the lingering sorrow of a lost home.", "yt_id": "x3tZ7gnbwXI"}, {"id": 9, "title": "Ae Zindagi Gale Laga Le", "category": "फ़लसफ़ा (Falsafa)", "film": "Sadma", "year": 1983, "singers": "Suresh Wadkar", "composer": "Ilaiyaraaja", "lyricist": "Gulzar", "desc_hi": "ज़िंदगी के हर जख्म, धोखे और तल्खी को सीने से लगाकर माफ कर देने का जज्बा। दर्द में भी मुस्कुराने का एक मासूम हौसला।", "desc_en": "A tender, forgiving embrace of life's deepest bruises, finding solace and grace in the midst of heartbreak.", "yt_id": "2tjx_Hng56g"}, {"id": 10, "title": "Agar Tum Saath Ho", "category": "जुदाई (Judai)", "film": "Tamasha", "year": 2015, "singers": "Alka Yagnik, Arijit Singh", "composer": "A. R. Rahman", "lyricist": "Irshad Kamil", "desc_hi": "टूटकर बिखर चुके दो वजूद और बेबसी के बहते खामोश आंसू। जब किसी को टूटकर चाहना ही सबसे बड़ी लाचारी बन जाए।", "desc_en": "The raw, silent devastation of two fracturing worlds, where holding on hurts just as much as letting go.", "yt_id": "sK7riqg2mr4"}, {"id": 11, "title": "Aisa Sama Na Hota", "category": "अहसास (Ehsaas)", "film": "Zameen Aasmaan", "year": 1984, "singers": "Lata Mangeshkar", "composer": "R. D. Burman", "lyricist": "Anjaan", "desc_hi": "पहाड़ों की ढलती छांव और धुंध में खोई पुरानी मोहब्बत की कशिश। एक ऐसा कोना जहाँ बीता हुआ वक्त आज भी सांस लेता है।", "desc_en": "Misty twilight settling over mountain slopes, holding the enduring warmth of a love that refused to fade.", "yt_id": "AmiszHtmO4s"}, {"id": 12, "title": "Ajeeb Dastaan Hai Yeh", "category": "फ़लसफ़ा (Falsafa)", "film": "Dil Apna Aur Preet Parai", "year": 1960, "singers": "Lata Mangeshkar", "composer": "Shankar-Jaikishan", "lyricist": "Shailendra", "desc_hi": "मुकद्दर के अजीब मोड़ और मुसाफिरों की तरह बिछड़ते-मिलते रास्तों का अफसाना। बहते पानी की तरह ज़िंदगी को अपना लेने की सीख।", "desc_en": "The bittersweet crossroads of destiny, learning to smile as life’s winding river charts its own quiet course.", "yt_id": "l7GR1S-HNGo"}, {"id": 13, "title": "Alvida", "category": "जुदाई (Judai)", "film": "Rangoon", "year": 2017, "singers": "Arijit Singh", "composer": "Vishal Bhardwaj", "lyricist": "Gulzar", "desc_hi": "आंखों में तैरता भारीपन और विदाई के आखिरी मोड़ पर बंधा हुआ एक खामोश, उदास अलविदा।", "desc_en": "A heavy, lingering glance at the station of farewell, where words fall short and only quiet ache remains.", "yt_id": "3GDhTM29LkA"}, {"id": 14, "title": "Aye Khuda  Gir Gaya", "category": "इबादत (Ibaadat)", "film": "Murder 2", "year": 2011, "singers": "Mithoon, Kshitij Tarey, Saim Bhat", "composer": "Mithoon", "lyricist": "Mithoon", "desc_hi": "गलतियों की तपिश में जलते दिल की एक सच्ची पश्चाताप भरी पुकार। जब टूटी हुई रूह सिर्फ रहम और पनाह तलाशती है।", "desc_en": "A cathartic cry born of brokenness, kneeling in darkness and seeking a ray of forgiveness and redemption.", "yt_id": "HGfc06RZyjQ"}, {"id": 15, "title": "Baadlon Se Kaat Kaat Ke", "category": "बारिश (Baarish)", "film": "Satya", "year": 1998, "singers": "Bhupinder Singh", "composer": "Sandeep Chowta", "lyricist": "Gulzar", "desc_hi": "बारिश से तर मुम्बई की सड़कें, गीली बालकनी और सिगरेट के धुएं में तैरता शहर का अकेलापन।", "desc_en": "Drenched asphalt beneath streetlamps and the quiet companionship of rising smoke on a rainy midnight.", "yt_id": "4AHaec0CPVk"}, {"id": 16, "title": "Bade Achhe Lagte Hain Ye Dharti Ye Nadiya", "category": "सुकूँ (Sukoon)", "film": "Balika Badhu", "year": 1976, "singers": "Amit Kumar", "composer": "R. D. Burman", "lyricist": "Anand Bakshi", "desc_hi": "साधारण खुशियों, नदिया के किनारे और हरी-भरी वादियों के बीच दिल का बच्चों जैसा मचल जाना।", "desc_en": "The gentle sweetness of modest joys, celebrating green earth, drifting clouds, and an unburdened spirit.", "yt_id": "yF68cn3Il3M"}, {"id": 17, "title": "Badi Dheere Jali", "category": "जुदाई (Judai)", "film": "Ishqiya", "year": 2010, "singers": "Rekha Bhardwaj", "composer": "Vishal Bhardwaj", "lyricist": "Gulzar", "desc_hi": "सर्द रातों में धीरे-धीरे सुलगती विरह की आग, जिसकी तपिश रूह में एक मीठा दर्द घोलती है।", "desc_en": "A slow-burning fire of longing on a cold winter night, embers glowing long after the flames have settled.", "yt_id": "mxht5M1DQY8"}, {"id": 18, "title": "Behe Chala", "category": "रवानगी (Rawaangi)", "film": "Uri: The Surgical Strike", "year": 2019, "singers": "Yasser Desai / Shashwat", "composer": "Shashwat Sachdev", "lyricist": "Raj Shekhar", "desc_hi": "शहादत की गहरी, गंभीर और मौन नदी जो हर शोर को शांत कर अंतर्मन में देशभक्ति की लौ जलाती है।", "desc_en": "A tranquil, reverent current of devotion that flows silently beneath the weight of sacrifice and grace.", "yt_id": "BC2UlVAEwi4"}, {"id": 19, "title": "Barish ke bad ki geeli mitti", "category": "बारिश (Baarish)", "film": "Betaabi", "year": 1997, "singers": "Suresh wadekar asha bhosle", "composer": "Vishal Bhardwaj", "lyricist": "gulzar", "desc_hi": "पहली बारिश के बाद उठने वाली सौंधी खुशबू और रात के अंधेरे में महकती अनकही नजदीकियां।", "desc_en": "The intoxicating perfume of wet soil and the gentle stirrings of intimacy on a drenched evening.", "yt_id": "G9HTFSuJ2fc"}, {"id": 20, "title": "Chandni Raatein Taaron Se Karein Baatein", "category": "अहसास (Ehsaas)", "film": "Partners in Rhymes", "year": 1999, "singers": "Shamsa Kanwal", "composer": "", "lyricist": "", "desc_hi": "तारों भरी विंटेज रातों में छत पर टहलते हुए पुराने दिनों को याद कर चुपके-चुपके बहते आंसू।", "desc_en": "Solitary midnight walks beneath a canopy of stars, whispering long-forgotten promises to the moon.", "yt_id": "yTkaKSVu_xU"}, {"id": 21, "title": "Chappa Chappa Charkha Chale", "category": "सुकूँ (Sukoon)", "film": "Maachis", "year": 1996, "singers": "Hariharan, Suresh Wadkar", "composer": "Vishal Bhardwaj", "lyricist": "Gulzar", "desc_hi": "सर्दियों के अलाव के इर्द-गिर्द बैठे यारों की महफिल, जहाँ धुएं के साथ बीती हुई मासूमियत ताजा हो जाती है।", "desc_en": "Gathering around a winter bonfire with old companions, where laughter warms the bite of frozen air.", "yt_id": "HVa0owi2ZP4"}, {"id": 22, "title": "Charkha Chalaati Maa", "category": "यादें (Yaadein)", "film": "Pinjar", "year": 2003, "singers": "Preeti Uttam", "composer": "Uttam Singh", "lyricist": "Gulzar", "desc_hi": "विभाजन के खूनी पन्नों में दबी माँ की लोरी और छूट गई सरजमीं की छाती चीरने वाली तड़प।", "desc_en": "A mother’s spinning wheel weeping across scarred borders, yearning for the gentle soil of childhood.", "yt_id": "61fwsJ7bxdE"}, {"id": 23, "title": "Chhai Chhappa Chhai Chhapake Chhai", "category": "सुकूँ (Sukoon)", "film": "Hu Tu Tu", "year": 1999, "singers": "Hariharan, Lata Mangeshkar", "composer": "Vishal Bhardwaj", "lyricist": "Gulzar", "desc_hi": "कागज की कश्तियों, बारिश के छपछपाते पानी और बेपरवाह बचपन की यादों का एक खुशगवार झोंका।", "desc_en": "Paper boats sailing across muddy monsoon puddles, carrying the unpolluted laughter of forgotten days.", "yt_id": "j1ZfgDMnubA"}, {"id": 24, "title": "Chhod Aaye Hum Wo Galiyan", "category": "यादें (Yaadein)", "film": "Maachis", "year": 1996, "singers": "KK, Hariharan, Suresh Wadkar", "composer": "Vishal Bhardwaj", "lyricist": "Gulzar", "desc_hi": "अपने गांव की गलियों, पीपल की छांव और बिछड़े हमजोलियों को याद कर तड़पते दिल का मर्सिया।", "desc_en": "A tearful elegy for childhood streets and rooted friendships, forever left behind on the road of life.", "yt_id": "RraeHart9uY"}, {"id": 25, "title": "Chhoti Si Kahani Se", "category": "सुकूँ (Sukoon)", "film": "Ijaazat", "year": 1987, "singers": "Asha Bhosle", "composer": "R. D. Burman", "lyricist": "Gulzar", "desc_hi": "छोटी-छोटी बातों में सिमटी ज़िंदगी और खामोशी से कटते दिनों का एक धीमा, विचारमग्न अहसास।", "desc_en": "Quiet, ordinary hours turning into memories, finding depth in life’s most unassuming fragments.", "yt_id": "uRz6jcaz5Vk"}, {"id": 26, "title": "Chitthiye Ni Dard Firaaq Waliye", "category": "जुदाई (Judai)", "film": "Heena", "year": 1991, "singers": "Lata Mangeshkar", "composer": "Ravindra Jain", "lyricist": "Ravindra Jain", "desc_hi": "वादियों के पार किसी अपने को तलाशती विरह की पुकार, जो हवाओं के कंधे पर सवार होकर उड़ती है।", "desc_en": "A soaring cry carrying unexpressed yearnings across snowy valleys, drifting like an unwritten letter.", "yt_id": "BRzTERXZuN0"}, {"id": 27, "title": "Chupke Se Lag Ja Gale", "category": "इश्क़ (Ishq)", "film": "Saathiya", "year": 2002, "singers": "Sadhana Sargam, Murtuza-Qadir", "composer": "A. R. Rahman", "lyricist": "Gulzar", "desc_hi": "रात की ठंडी चादर ओढ़े कमरे में की जाने वाली वो बातें जो सिर्फ धड़कनों को सुनाई देती हैं।", "desc_en": "A hush falling over midnight pillows, where true intimacy needs only breathing room to be understood.", "yt_id": "vXCMU3UTgt4"}, {"id": 28, "title": "Chupke Se Raat Ki Chaadar Tale", "category": "इश्क़ (Ishq)", "film": "Saathiya", "year": 2002, "singers": "Sadhana Sargam, Murtuza-Qadir", "composer": "A. R. Rahman", "lyricist": "Gulzar", "desc_hi": "चांद की नर्म रोशनी में लिपटी दो परछाइयां, जहाँ दुनिया का हर शोर दूर कहीं ठहर जाता है।", "desc_en": "Two shadows merging under silvery beams, sheltered safely away from the rush of an uncaring world.", "yt_id": "eMA6GHTQ4WA"}, {"id": 29, "title": "Dekho To Aasman", "category": "रवानगी (Rawaangi)", "film": "Jahan Tum Le Chalo", "year": 1999, "singers": "Suresh Wadkar", "composer": "Vishal Bhardwaj", "lyricist": "Gulzar", "desc_hi": "सड़क का अंतहीन सफर, खिड़की से आती ताज़ा हवा और परिंदों की तरह आजाद उड़ जाने की तमन्ना।", "desc_en": "An unpaved road stretching toward sunrise, breathing in freedom with every mile left behind.", "yt_id": "l4dDe4dl_aE"}, {"id": 30, "title": "Dheere Jalna (Zindagi Ki Lau Pe)", "category": "अहसास (Ehsaas)", "film": "Paheli", "year": 2005, "singers": "Sonu Nigam, Shreya Ghoshal", "composer": "M. M. Keeravani", "lyricist": "Gulzar", "desc_hi": "मिट्टी के दीये की लौ की तरह धीरे-धीरे सुलगता प्रेम, जिसमें उतावलापन नहीं सिर्फ गहरा समर्पण है।", "desc_en": "A love that burns with the patient steadiness of an earthen lamp, asking for nothing but quiet presence.", "yt_id": "vpTqUne_g6E"}, {"id": 31, "title": "Dikhayi Diye Yun Ki Bekhud Kiya", "category": "अरमान (Armaan)", "film": "Bazaar", "year": 1982, "singers": "Lata Mangeshkar", "composer": "Khayyam", "lyricist": "Mir Taqi Mir", "desc_hi": "इश्क के उस मुकाम पर पहुंचना जहाँ खुद की हस्ती मिट जाए और सामने सिर्फ महबूब का अक्स रह जाए।", "desc_en": "The exquisite intoxication of self-erasure, melting completely into the gaze of the one you adore.", "yt_id": "OEHrbEkJ1yA"}, {"id": 32, "title": "Dil Dhoondhta Hai Phir Wahi", "category": "यादें (Yaadein)", "film": "Mausam", "year": 1975, "singers": "Bhupinder Singh, Lata Mangeshkar", "composer": "Madan Mohan", "lyricist": "Gulzar", "desc_hi": "सर्दियों की गुनगुनी धूप में बैठकर पुरानी यादों के संदूक को खोलना और अतीत में खो जाना।", "desc_en": "Basking in weak winter sunshine, unfolding old letters that still carry the faint scent of yesterday.", "yt_id": "2RL0XVbs3Us"}, {"id": 33, "title": "Dil Hoom Hoom Kare", "category": "बारिश (Baarish)", "film": "Rudaali", "year": 1993, "singers": "Lata Mangeshkar / Bhupen Hazarika", "composer": "Bhupen Hazarika", "lyricist": "Gulzar", "desc_hi": "सीने के भीतर मचलता एक अजीब तूफान, जैसे सूखी बंजर जमीन पर सदियों बाद मेघ बरसने वाले हों।", "desc_en": "An unsettling, primeval storm brewing in the chest, tearing through desolation with raw intensity.", "yt_id": "eqnBCxCCaNw"}, {"id": 34, "title": "Dil To Hai Dil", "category": "अहसास (Ehsaas)", "film": "Muqaddar Ka Sikandar", "year": 1978, "singers": "Lata Mangeshkar", "composer": "Kalyanji-Anandji", "lyricist": "Anjaan", "desc_hi": "दिल की नादानियां और उसकी मासूम जिद्द, जो तमाम तजुर्बों के बाद भी धड़कना नहीं छोड़ती।", "desc_en": "The stubborn innocence of a vulnerable heart that continues to believe, despite life's hard lessons.", "yt_id": "5NYAsEn6-Uo"}, {"id": 35, "title": "Do Kadam Aur Sahi", "category": "फ़लसफ़ा (Falsafa)", "film": "Meenaxi: A Tale of 3 Cities", "year": 2004, "singers": "Sonu Nigam", "composer": "A. R. Rahman", "lyricist": "Rahat Indori", "desc_hi": "थके हुए कदमों के साथ आगे बढ़ते जाना और उम्मीद की एक किरण देखकर मुस्कुराने की कोशिश करना।", "desc_en": "Taking one more weary step toward the horizon, gently coaxing courage out of tired limbs.", "yt_id": "79LvmgEUygg"}, {"id": 36, "title": "Ek Haseen Sham Ko Dil Mera Kho Gaya", "category": "अहसास (Ehsaas)", "film": "Dulhan Ek Raat Ki", "year": 1967, "singers": "Mohammed Rafi", "composer": "Madan Mohan", "lyricist": "Raja Mehdi Ali Khan", "desc_hi": "पहली नजर का सम्मोहन और ढलती शाम के रंगीन आसमान तले दिल का बेकाबू हो जाना।", "desc_en": "The breathless vertigo of first sight, watched over by a twilight sky painted in molten hues.", "yt_id": "DSLom3aTgZ8"}, {"id": 37, "title": "Ek Pyaar Ka Nagma Hai", "category": "फ़लसफ़ा (Falsafa)", "film": "Shor", "year": 1972, "singers": "Lata Mangeshkar, Mukesh", "composer": "Laxmikant-Pyarelal", "lyricist": "Santosh Anand", "desc_hi": "ज़िंदगी की नश्वरता को स्वीकार कर हर बहते पल को मोहब्बत की नजर से देखने का फलसफा।", "desc_en": "An enduring hymn to the flowing river of existence, celebrating life as a brief, beautiful song.", "yt_id": "qOkE3ekdaco"}, {"id": 38, "title": "Ek Wo Din Bhi The", "category": "यादें (Yaadein)", "film": "Chachi 420", "year": 1997, "singers": "Hariharan", "composer": "Vishal Bhardwaj", "lyricist": "Gulzar", "desc_hi": "उन दिनों की याद जब दिल बेफिक्र था और दुनिया की उलझनों ने छूआ तक न था।", "desc_en": "A wistful glance into the rear-view mirror of time, longing for the unburdened ease of early mornings.", "yt_id": "Ijre0k0MsPg"}, {"id": 39, "title": "Gaadi Bula Rahi Hai Seeti Baja Rahi Hai", "category": "रवानगी (Rawaangi)", "film": "Dost", "year": 1974, "singers": "Kishore Kumar", "composer": "Laxmikant-Pyarelal", "lyricist": "Anand Bakshi", "desc_hi": "पटरी पर दौड़ती गाड़ी और सीटी की गूंज, जो कहती है कि रुकना मौत है और चलना ही असली ज़िंदगी है।", "desc_en": "The hypnotic pulse of rails underneath, reminding the wayfarer that motion itself is the cure for sorrow.", "yt_id": "m4o0jUEVtoQ"}, {"id": 40, "title": "Geela Geela Paani", "category": "बारिश (Baarish)", "film": "Satya", "year": 1998, "singers": "Lata Mangeshkar", "composer": "Vishal Bhardwaj", "lyricist": "Gulzar", "desc_hi": "आधी रात को छतों से टपकता पानी और अकेलेपन के कमरे में गूंजती पुरानी बातों की नमी।", "desc_en": "The persistent drip of midnight rain against the pane, seeping into the dry cracks of solitude.", "yt_id": "9EinM1jUsn8"}, {"id": 41, "title": "Gulo Mein Rang Bhare", "category": "बारिश (Baarish)", "film": "Haider", "year": 2014, "singers": "Arijit Singh", "composer": "Vishal Bhardwaj", "lyricist": "Faiz Ahmad Faiz", "desc_hi": "बर्फबारी के बीच खामोश खड़े चिनार के पत्ते और वादियों में गूंजती किसी खोए हुए अपने की याद।", "desc_en": "Bare branches shivering under winter snow, bearing witness to a silent and dignified heartache.", "yt_id": "2E4aaIvrU7Q"}, {"id": 42, "title": "Haath Chhoote Bhi To Rishte", "category": "यादें (Yaadein)", "film": "Pinjar", "year": 2003, "singers": "Jagjit Singh, Preeti Uttam Singh", "composer": "Uttam Singh", "lyricist": "Gulzar", "desc_hi": "जिस्म के अलग हो जाने पर भी रूह के अदृश्य धागों से हमेशा बंधे रहने का दर्दनाक अहसास।", "desc_en": "Threads of the spirit that refuse to snap, binding two separated lives across silence and years.", "yt_id": "61fwsJ7bxdE"}, {"id": 43, "title": "Hamnava (Mujhe Apna Bana Le)", "category": "अहसास (Ehsaas)", "film": "Hamari Adhuri Kahani", "year": 2015, "singers": "Papon", "composer": "Mithoon", "lyricist": "Manoj Muntashir", "desc_hi": "सूखे बंजर दिल की जमीन पर किसी अपने की मौजूदगी की बारिश की प्यास और लाचार पुकार।", "desc_en": "A parched soul pleading for a single drop of kindness, looking to be sheltered from bitter cold.", "yt_id": "pP12RCC6Nss"}, {"id": 45, "title": "Is Mod Se Jaate Hain", "category": "यादें (Yaadein)", "film": "Aandhi", "year": 1975, "singers": "Kishore Kumar, Lata Mangeshkar", "composer": "R. D. Burman", "lyricist": "Gulzar", "desc_hi": "सड़क के उस मोड़ पर खड़े होकर पीछे देखना, जहाँ कभी हमने अपनी सबसे खूबसूरत शामें बिताई थीं।", "desc_en": "Pausing at an old crossroad to inhale the phantom fragrance of moments that slipped away.", "yt_id": "Efx7BIzMEPI"}, {"id": 46, "title": "Itna Lamba Kash Lo Yaaron", "category": "सुकूँ (Sukoon)", "film": "Hu Tu Tu", "year": 1999, "singers": "Lata Mangeshkar, Hariharan", "composer": "Vishal Bhardwaj", "lyricist": "Gulzar", "desc_hi": "महफिल की हंसी और धुएं के पीछे छुपा वो अकेलापन, जिसे सिर्फ रात का सन्नाटा समझता है।", "desc_en": "A tired, meditative exhale into the dark, watching life’s heavy burdens dissipate like ringlets of smoke.", "yt_id": "V7N2qht_Izc"}, {"id": 47, "title": "Jaane Waale O Jaane Waale", "category": "जुदाई (Judai)", "film": "Heena", "year": 1991, "singers": "Lata Mangeshkar, Suresh Wadkar", "composer": "Ravindra Jain", "lyricist": "Ravindra Jain, Anand Bakshi", "desc_hi": "जाते हुए मुसाफिर की ओर उठती बेबस निगाहें और होंठों पर ठहरी हुई अनकही दुआएं।", "desc_en": "Watching a familiar silhouette turn the bend, helpless to stay the departure yet whispering blessings.", "yt_id": "o4eopW1gNdw"}, {"id": 48, "title": "Jaise Tu Hai Paas Mere", "category": "अहसास (Ehsaas)", "film": "Main Wapas Aaunga", "year": 2014, "singers": "Papon", "composer": "Aniruddha Bansal", "lyricist": "Aniruddha Bansal", "desc_hi": "खाली कमरे में किसी की महक और कदमों की आहट महसूस होना, जैसे वो कभी गया ही न हो।", "desc_en": "The phantom warmth of a loved presence lingering in an empty doorway long after the door has shut.", "yt_id": "dVMM_7yxgqc"}, {"id": 49, "title": "Jhonka Hawa Ka Aaj Bhi", "category": "यादें (Yaadein)", "film": "Hum Dil De Chuke Sanam", "year": 1999, "singers": "Hariharan, Kavita Krishnamurthy", "composer": "Ismail Darbar", "lyricist": "Mehboob", "desc_hi": "अचानक चलने वाली ठंडी हवा का वो झोंका जो आंखों में पुरानी बातों की नमी छोड़ जाता है।", "desc_en": "A sudden rustle of wind through open curtains, unearthing memories buried beneath months of quiet.", "yt_id": "GibRJVMtzPg"}, {"id": 50, "title": "Jhuki Jhuki Si Nazar", "category": "अरमान (Armaan)", "film": "Arth", "year": 1982, "singers": "Jagjit Singh", "composer": "Jagjit Singh", "lyricist": "Kaifi Azmi", "desc_hi": "शर्म और अदब के पर्दे में लिपटा वो इजहार, जहाँ निगाहें झुककर भी सारा हाल-ए-दिल कह देती हैं।", "desc_en": "The refined beauty of modest glances, speaking volumes through lowered lashes and held breath.", "yt_id": "veLSFpMS6B0"}, {"id": 51, "title": "Jindagi Kaisi Hai Ye Paheli", "category": "फ़लसफ़ा (Falsafa)", "film": "Anand", "year": 1972, "singers": "Manna Dey", "composer": "Salil Chowdhury", "lyricist": "Gulzar", "desc_hi": "लहरों के किनारे बैठकर ज़िंदगी के खेल पर एक हल्की सी दार्शनिक मुस्कान बिखेर देना।", "desc_en": "A gentle, knowing smile by the sea, watching the tides of circumstance roll in and pull back out.", "yt_id": "cP44iDZZ_wY"}, {"id": 52, "title": "Jiya Jale Jaan Jale", "category": "बारिश (Baarish)", "film": "Dil Se..", "year": 1998, "singers": "Lata Mangeshkar, M. G. Sreekumar", "composer": "A. R. Rahman", "lyricist": "Gulzar", "desc_hi": "सीने में धड़कती एक बेचैन आग और रात के अंधेरे में जागती बेपरवाह चाहत का उफान।", "desc_en": "An intoxicating, nocturnal pulse of feverish longing that burns bright in the chill of darkness.", "yt_id": "M-2nlaOQQSQ"}, {"id": 53, "title": "Jiya Laage Na Tum Bin Mora", "category": "अहसास (Ehsaas)", "film": "Talaash", "year": 2012, "singers": "Sona Mohapatra, Ravindra Upadhyay", "composer": "Ram Sampath", "lyricist": "Javed Akhtar", "desc_hi": "किसी अपने के बिना दुनिया का वीराना और मन के किसी कोने में उठती एक गहरी टीस।", "desc_en": "A sudden, hollow vacuum in the chest, mourning the desolation of an unfinished conversation.", "yt_id": "3quthi1mGvI"}, {"id": 54, "title": "Jo Bheji Thi Dua", "category": "इबादत (Ibaadat)", "film": "Shanghai", "year": 2012, "singers": "Arijit Singh, Nandini Srikar", "composer": "Vishal-Shekhar", "lyricist": "Kumaar", "desc_hi": "खाली हाथों लौट आने वाली उम्मीदें और टूटे हुए सपनों की धूल फांकती एक बेबस तन्हाई।", "desc_en": "The cold shock of unanswered prayers, standing alone amidst the quiet ruins of fragile expectations.", "yt_id": "M_V8FLrll9w"}, {"id": 55, "title": "Jo Bhi Main Kehna Chahoon", "category": "तन्हाई (Tanhai)", "film": "Rockstar", "year": 2011, "singers": "Mohit Chauhan", "composer": "A. R. Rahman", "lyricist": "Irshad Kamil", "desc_hi": "जब दिल के भीतर का दर्द इतना बड़ा हो जाए कि कोई भी लफ्ज़ उसे बयां न कर सके।", "desc_en": "The frustrating silence of profound emotion, when the deepest sentiments refuse to fit into spoken words.", "yt_id": "_kOzFMR9Hys"}, {"id": 56, "title": "Kabira  Re Kabira Maan Ja", "category": "रवानगी (Rawaangi)", "film": "Yeh Jawaani Hai Deewani", "year": 2013, "singers": "Rekha Bhardwaj, Tochi Raina", "composer": "Pritam", "lyricist": "Amitabh Bhattacharya", "desc_hi": "दुनिया के शोर से मुँह मोड़कर अपने अंदर के फकीर और सच्चे सुकून की ओर लौट आना।", "desc_en": "Turning away from worldly facades and returning home to the sanctuary of one's own calm spirit.", "yt_id": "jHNNMj5bNQw"}, {"id": 57, "title": "Katra Katra Milti Hai", "category": "बारिश (Baarish)", "film": "Ijaazat", "year": 1987, "singers": "Asha Bhosle", "composer": "R. D. Burman", "lyricist": "Gulzar", "desc_hi": "ज़िंदगी के हर छोटे लम्हे को चोरी-चुपके सहेजने की कोशिश, ताकि तन्हाई में सहारा मिल सके।", "desc_en": "Savoring joy drop by fragile drop, knowing that light is rare and must be guarded with care.", "yt_id": "nhQUHvZSlvs"}, {"id": 58, "title": "Khaali Haath Shaam Aayi Hai", "category": "तन्हाई (Tanhai)", "film": "Ijaazat", "year": 1987, "singers": "Asha Bhosle", "composer": "R. D. Burman", "lyricist": "Gulzar", "desc_hi": "ढलती हुई शाम जब बिना किसी मुलाकात के खाली हाथ लौट जाए, तब दिल पर छाने वाली उदासी।", "desc_en": "Watching the amber light fade into dusk without a single step heard on the garden path.", "yt_id": "d4bSTOvZNEg"}, {"id": 59, "title": "Khamosh Sa Afsana", "category": "तन्हाई (Tanhai)", "film": "Ijaazat", "year": 1987, "singers": "Asha Bhosle, Anurag Sharma", "composer": "R. D. Burman", "lyricist": "Gulzar", "desc_hi": "खामोशी के समंदर में तैरती एक नाव, जहाँ शब्दों की जरूरत खत्म हो चुकी है।", "desc_en": "Floating upon calm waters of absolute quiet, where understanding flows without a sound.", "yt_id": "TzUUy3-RuZ4"}, {"id": 60, "title": "Khamoshiyan Gungunane Lagin", "category": "सुकूँ (Sukoon)", "film": "One 2 Ka 4", "year": 2001, "singers": "Sonu Nigam, Anuradha Paudwal", "composer": "A. R. Rahman", "lyricist": "Mehboob", "desc_hi": "सपनों की दुनिया में धीमी सरगोशियां, जैसे नींद में कोई रूहानी लोरी गा रहा हो।", "desc_en": "A lullaby humming through twilight dreams, soothing frayed nerves with invisible caresses.", "yt_id": "nYnimCQqcmc"}, {"id": 61, "title": "Kismat Se Tum Humko Mile Ho", "category": "सुकूँ (Sukoon)", "film": "Pukaar", "year": 2000, "singers": "Sonu Nigam, Anuradha Paudwal", "composer": "A. R. Rahman", "lyricist": "Majrooh Sultanpuri", "desc_hi": "अचानक किसी सच्चे हमसफर के मिल जाने पर ईश्वर के आगे सिर झुकाकर बहाए गए कृतज्ञता के आंसू।", "desc_en": "A quiet, tearful bowing of the head, thankful for the unexpected mercy of unconditional companionship.", "yt_id": "f4zmpcBscoE"}, {"id": 62, "title": "Kitne Ajeeb Rishte Hain Yahan Pe", "category": "फ़लसफ़ा (Falsafa)", "film": "Page 3", "year": 2005, "singers": "Lata Mangeshkar", "composer": "Sameer Tandon", "lyricist": "Sandeep Nath", "desc_hi": "दिखावे की दुनिया की चकाचौंध के पीछे सिसकते हुए खोखले रिश्तों का आईना।", "desc_en": "Peering behind glamorous masks to find the hollow echo of transactions masquerading as ties.", "yt_id": "d5a_C3QYBk8"}, {"id": 63, "title": "Kuch Dil Ne Kaha Kuch Bhi Nahi", "category": "तन्हाई (Tanhai)", "film": "Anupamaa", "year": 1966, "singers": "Lata Mangeshkar", "composer": "Hemant Kumar", "lyricist": "Kaifi Azmi", "desc_hi": "बिना बोले भी सब समझ जाने की वो नजाकत, जो सिर्फ दो सच्ची रूहों के बीच मुमकिन है।", "desc_en": "A tender, wordless communion where silence creates a sacred space between two understanding hearts.", "yt_id": "69dnqIFfrnE"}, {"id": 64, "title": "Kuch Na Kaho Kuch Bhi Na Kaho", "category": "अरमान (Armaan)", "film": "1942: A Love Story", "year": 1994, "singers": "Kumar Sanu / Lata Mangeshkar", "composer": "R. D. Burman", "lyricist": "Javed Akhtar", "desc_hi": "प्रेम की वो सीमा जहाँ लफ्ज़ शोर लगने लगते हैं और सिर्फ सांसों की नजदीकी ही सच लगती है।", "desc_en": "The sublime threshold where speech becomes superfluous, and pure presence fills the universe.", "yt_id": "I2NKqUvAwpE"}, {"id": 65, "title": "Kun Faya Kun", "category": "इबादत (Ibaadat)", "film": "Rockstar", "year": 2011, "singers": "A. R. Rahman, Javed Ali, Mohit Chauhan", "composer": "A. R. Rahman", "lyricist": "Irshad Kamil", "desc_hi": "दरगाह की चौखट पर सिर रखकर खुद को पूरी तरह मिटा देना और रूहानी शांति पा लेना।", "desc_en": "Laying the bruised ego at the threshold of grace, dissolving into the timeless quiet of the divine.", "yt_id": "T94PHkuydcw"}, {"id": 66, "title": "Main Ek Sadi Se Baithi Hoon", "category": "तन्हाई (Tanhai)", "film": "Lekin..", "year": 1990, "singers": "Lata Mangeshkar", "composer": "Hridaynath Mangeshkar", "lyricist": "Gulzar", "desc_hi": "सदियों से किसी के लौट आने की उम्मीद में पथराई आंखें और रेत पर बनते-बिगड़ते निशान।", "desc_en": "A centuries-old vigil frozen in the desert, tracing patterns in the sand while waiting for footsteps.", "yt_id": "bCe91Ig0fQs"}, {"id": 67, "title": "Main To Deewani Hui", "category": "इश्क़ (Ishq)", "film": "Vansh", "year": 1992, "singers": "Lata Mangeshkar, Suresh Wadkar", "composer": "Anand-Milind", "lyricist": "Sameer", "desc_hi": "समर्पण का वो नशा जहाँ अपनी हर खुशी और हर सांस किसी के नाम कर दी जाती है।", "desc_en": "The sweet, intoxicating abandon of laying one's entire existence gently into trusted hands.", "yt_id": "-qFifdvQ314"}, {"id": 68, "title": "Man Kyon Behka Re Behka", "category": "अहसास (Ehsaas)", "film": "Utsav", "year": 1984, "singers": "Lata Mangeshkar, Asha Bhosle", "composer": "Laxmikant-Pyarelal", "lyricist": "Vasant Dev", "desc_hi": "मौसम के बदलने के साथ अंगड़ाई लेती नई उम्मीदें और सखियों के बीच प्रेम की फुसफुसाहट।", "desc_en": "Spring winds carrying secret blushes and playful confessions through fragrant mango blossoms.", "yt_id": "tyOAj-4sPdw"}, {"id": 69, "title": "Mera Kuch Saamaan Tumhare Paas Pada Hai", "category": "जुदाई (Judai)", "film": "Ijaazat", "year": 1987, "singers": "Asha Bhosle", "composer": "R. D. Burman", "lyricist": "Gulzar", "desc_hi": "रिश्ते के खत्म होने के बाद छोड़े गए भीगे दिन, चिट्ठियों में लिपटी रातें और बचा हुआ सामान।", "desc_en": "A cardboard box of relics: rainy afternoons, folded letters, and nights that still stubbornly hold embers.", "yt_id": "6i9YxZKnQeY"}, {"id": 70, "title": "Mera Yaar Mila De", "category": "इबादत (Ibaadat)", "film": "Saathiya", "year": 2002, "singers": "A. R. Rahman", "composer": "A. R. Rahman", "lyricist": "Gulzar", "desc_hi": "इश्क की तड़प में भटकी हुई रूह की अपने प्रियतम को पुकारती एक बेबाक और दीवानी सदा।", "desc_en": "A raw, unvarnished cry rising from the marrow, desperate to cross the distance to the beloved.", "yt_id": "dj64cIE9c2E"}, {"id": 71, "title": "Mere Haath Mein Tera Haath Ho", "category": "अरमान (Armaan)", "film": "Fanaa", "year": 2006, "singers": "Sonu Nigam, Sunidhi Chauhan", "composer": "Jatin-Lalit", "lyricist": "Prasoon Joshi", "desc_hi": "बर्फ की वादियों में एक-दूसरे का हाथ थामकर उम्र भर साथ निभाने का लिया गया पवित्र वचन।", "desc_en": "Hands clasped tight against biting winter blizzards, forging a sanctuary from warmth and quiet faith.", "yt_id": "qtz5mpvgAM0"}, {"id": 72, "title": "Mere Pee Ko Pawan", "category": "अहसास (Ehsaas)", "film": "Ghulami", "year": 1985, "singers": "Lata Mangeshkar", "composer": "Laxmikant-Pyarelal", "lyricist": "Gulzar", "desc_hi": "रेगिस्तान के धोरों में उड़ती विरह की गर्म रेत और हवा के कानों में भेजा गया विरह संदेश।", "desc_en": "Whispering a lover's name to the wandering desert wind, trusting it to reach far-flung dunes.", "yt_id": "uUjeJdaliK4"}, {"id": 73, "title": "Musafir Hoon Yaaron Na Ghar Hai Na Dar Hai", "category": "रवानगी (Rawaangi)", "film": "Parichay", "year": 1972, "singers": "Kishore Kumar", "composer": "R. D. Burman", "lyricist": "Gulzar", "desc_hi": "रास्तों की धूल छानता एक बेपरवाह मुसाफिर, जिसके पास न कोई घर है और न कोई मंजिल की फिक्र।", "desc_en": "An unencumbered soul striding down endless highways, calling the open sky his only true ceiling.", "yt_id": "1DwROkoAAcI"}, {"id": 74, "title": "Naam Gum Jayega", "category": "फ़लसफ़ा (Falsafa)", "film": "Kinara", "year": 1977, "singers": "Lata Mangeshkar, Bhupinder Singh", "composer": "R. D. Burman", "lyricist": "Gulzar", "desc_hi": "चेहरे और नाम भले ही वक्त की धूल में खो जाएं, पर सच्ची आवाज कभी नहीं मरती।", "desc_en": "Though forms fade and faces blur with time, the resonance of sincere love outlives the stars.", "yt_id": "CX5bLCWzotc"}, {"id": 75, "title": "Naino Me Badra Chhaye", "category": "बारिश (Baarish)", "film": "Mera Saaya", "year": 1966, "singers": "Lata Mangeshkar", "composer": "Madan Mohan", "lyricist": "Raja Mehdi Ali Khan", "desc_hi": "वर्षा ऋतु के घने मेघों का विरह और आंखों से बरसते आंसुओं की मद्धम शास्त्रीय लय।", "desc_en": "Dark monsoon clouds weeping over lonely terraces, mirroring the quiet ache pooling behind tired eyes.", "yt_id": "aNfFDGuK2yk"}, {"id": 76, "title": "Neela Aasman So Gaya", "category": "तन्हाई (Tanhai)", "film": "Silsila", "year": 1981, "singers": "Amitabh Bachchan / Lata Mangeshkar", "composer": "Shiv-Hari", "lyricist": "Javed Akhtar", "desc_hi": "नीले आसमान की ठंडी चादर तले बिखरी अधूरी यादें और रात के सन्नाटे का भारीपन।", "desc_en": "Gazing into indigo voids, where broken dreams scatter like starlight across an indifferent sky.", "yt_id": "KTLXBc8SrnI"}, {"id": 77, "title": "O Maanjhi Re Apna Kinara", "category": "रवानगी (Rawaangi)", "film": "Khushboo", "year": 1975, "singers": "Kishore Kumar", "composer": "R. D. Burman", "lyricist": "Gulzar", "desc_hi": "ज़िंदगी के तूफानों से थककर चूर हो चुके मुसाफिर की किनारे पर नाव बांधने की आखिरी ख्वाहिश।", "desc_en": "A battered vessel drifting toward the shallows, weary of battling the tide and desperate for stillness.", "yt_id": "vHGHzYFzr-E"}, {"id": 78, "title": "O Manjhi Chal", "category": "रवानगी (Rawaangi)", "film": "Aya Sawan Jhoom Ke", "year": 1969, "singers": "Mohammad Rafi", "composer": "Laxmikant-Pyarelal", "lyricist": "Anand Bakshi", "desc_hi": "नदी की लहरों के साथ बहती हुई नाव और निराशा के घुप अंधेरे में भी उम्मीद का दीया।", "desc_en": "Oars rhythmic in the current, steering through pitch-black waters toward a faint lantern on shore.", "yt_id": "fr9ZO87JonU"}, {"id": 79, "title": "O Re Piya", "category": "इबादत (Ibaadat)", "film": "Aaja Nachle", "year": 2007, "singers": "Rahat Fateh Ali Khan", "composer": "Salim-Sulaiman", "lyricist": "Jaideep Sahni", "desc_hi": "प्रेम की वो पवित्र इबादत जहाँ महबूब का दीदार ही ईश्वर की सबसे बड़ी इनायत बन जाता है।", "desc_en": "A soaring spiritual petition where romantic adoration transcends flesh to touch the sacred.", "yt_id": "iv7lcUkFVSc"}, {"id": 80, "title": "Paani Paani Re", "category": "बारिश (Baarish)", "film": "Maachis", "year": 1996, "singers": "Lata Mangeshkar", "composer": "Vishal Bhardwaj", "lyricist": "Gulzar", "desc_hi": "यादों के पुराने कुएं में झांकना और आंसुओं को चुपचाप अपने दामन में समेट लेना।", "desc_en": "Drawing cool remembrance from deep subterranean wells, washing the dust off old, sacred regrets.", "yt_id": "M8bt13aQD18"}, {"id": 81, "title": "Pehli Baar Mohabbat Ki Hai (Meri Aarzoo)", "category": "इश्क़ (Ishq)", "film": "Kaminey", "year": 2009, "singers": "Mohit Chauhan, Rekha Bhardwaj", "composer": "Vishal Bhardwaj", "lyricist": "Gulzar", "desc_hi": "पहली मोहब्बत की झिझक, सिगरेट का धुआं और बारिश की ठंडी बूंदों के बीच खोया हुआ मन।", "desc_en": "Nervous laughter in the rain and the slow coil of smoke, stepping gingerly into the current of passion.", "yt_id": "zhMoztMJPwE"}, {"id": 82, "title": "Phir Se Aiyo Badra Bidesi", "category": "बारिश (Baarish)", "film": "Namkeen", "year": 1982, "singers": "Asha Bhosle", "composer": "R. D. Burman", "lyricist": "Gulzar", "desc_hi": "तपती दोपहरी के बाद परदेसी बादलों की फुहार, जो बिछड़े हुए दिनों की ठंडक लौटा लाती है।", "desc_en": "A mischievous shower drenching baked earth, reviving memories thought lost to summer’s heat.", "yt_id": "BfeJ-tuUoIc"}, {"id": 83, "title": "Phir Wohi Raat Hai", "category": "तन्हाई (Tanhai)", "film": "Ghar", "year": 1978, "singers": "Kishore Kumar", "composer": "R. D. Burman", "lyricist": "Gulzar", "desc_hi": "कमरे के कोने में पसरा रात का घना साया और अकेलेपन से खामोशी में की गई गुफ्तगू।", "desc_en": "Facing the dark silhouette of the bedroom wall, learning to make peace with the room's emptiness.", "yt_id": "_Zovm1Rp6j0"}, {"id": 84, "title": "Poochhe Jo Koi Meri Nishaani", "category": "यादें (Yaadein)", "film": "Yahaan", "year": 2005, "singers": "Shreya Ghoshal", "composer": "Shantanu Moitra", "lyricist": "Gulzar", "desc_hi": "पहाड़ी वादियों के दरख्तों और सर्द हवाओं से किसी अपने का खोया हुआ पता पूछना।", "desc_en": "Asking the towering mountain pines if they saw which path carried away the keeper of your heart.", "yt_id": "Lk3IVZmx6oA"}, {"id": 85, "title": "Poora Dukh Aur Aadha Chand", "category": "जुदाई (Judai)", "film": "Khushboo (Ghazal Album)", "year": 1997, "singers": "Roop Kumar Rathod, Sonali Rathod", "composer": "Roop Kumar Rathod", "lyricist": "Parveen Shakir", "desc_hi": "हिज्र की सर्द रात, सीने में भरा पूरा दुख और आसमान में अकेला चमकता हुआ आधा चांद।", "desc_en": "A heavy chest carrying complete despair beneath the silver gaze of an incomplete winter moon.", "yt_id": "X7BrUyAZ660"}, {"id": 86, "title": "Pyaar Ye Jaane Kaisa Hai", "category": "अहसास (Ehsaas)", "film": "Rangeela", "year": 1995, "singers": "Suresh Wadkar, Kavita Krishnamurthy", "composer": "A. R. Rahman", "lyricist": "Mehboob", "desc_hi": "प्रेम के रहस्यमयी और गहरे अहसास की वो दास्तान जिसे लफ्जों में समेटना नामुमकिन है।", "desc_en": "A hushed acoustic journey through the sacred, bewildering labyrinth of true intimacy.", "yt_id": "r8IYn3_1McY"}, {"id": 87, "title": "Rone Do Jiya Kare", "category": "तन्हाई (Tanhai)", "film": "Maqbool", "year": 2003, "singers": "Rekha Bhardwaj", "composer": "Vishal Bhardwaj", "lyricist": "Gulzar", "desc_hi": "दिल के सारे अपराध-बोध और आंसुओं को बह जाने देना ताकि रूह फिर से हल्की हो सके।", "desc_en": "Letting centuries of accumulated sorrow flow openly down the cheeks, washing the inner altar clean.", "yt_id": "YUDcRjErnuE"}, {"id": 88, "title": "Roshni Se Bhare Bhare", "category": "अहसास (Ehsaas)", "film": "Asoka", "year": 2001, "singers": "Abhijeet, Alka Yagnik", "composer": "Anu Malik", "lyricist": "Gulzar", "desc_hi": "जंग और तबाही की धूल के बीच भी जलती हुई प्रेम की एक नन्ही, अटूट और रोशन लौ।", "desc_en": "A frail, luminous flame defying historical ruin, proving that tenderness outlasts the sword.", "yt_id": "4SbgqiOAhPY"}, {"id": 89, "title": "Roz Roz Aankhon Tale", "category": "सुकूँ (Sukoon)", "film": "Jeeva", "year": 1986, "singers": "Asha Bhosle, Amit Kumar", "composer": "R. D. Burman", "lyricist": "Gulzar", "desc_hi": "हर सुबह की चाय और रोजमर्रा की खामोशियों में भी बरसों पुरानी मोहब्बत का तरोताजा रहना।", "desc_en": "Finding eternal romance in routine mornings, shared glances over cups, and familiar footsteps.", "yt_id": "EO51fdQ1nT0"}, {"id": 90, "title": "Ruke Ruke Se Qadam Ruk Ke Baar Baar Chale", "category": "बारिश (Baarish)", "film": "Mausam", "year": 1975, "singers": "Lata Mangeshkar", "composer": "Madan Mohan", "lyricist": "Gulzar", "desc_hi": "कदमों की हिचकिचाहट और दिल का वो भारीपन जब जुदाई तय हो मगर रुखसत होना मुमकिन न लगे।", "desc_en": "Feet frozen on the doorstep, torn between the agony of lingering and the devastation of leaving.", "yt_id": "qffEu_c4zvI"}, {"id": 91, "title": "Saanu Saariyan Bichhad Gayi Raahan Ve", "category": "इबादत (Ibaadat)", "film": "Dhurandhar 2", "year": 2026, "singers": "Satinder Sartaaj", "composer": "Shashwat", "lyricist": "Traditional", "desc_hi": "अपनों के बिछड़ जाने और मिट्टी से उखड़ जाने का वो दर्द जो सिर्फ लोक-गीतों में जिंदा रहता है।", "desc_en": "A desolate pastoral lament mourning severed roots and empty village courtyards.", "yt_id": "0lO3gxW1er4"}, {"id": 92, "title": "Saanware Tore Bin Jiya Jaaye Na", "category": "इबादत (Ibaadat)", "film": "Bandit Queen", "year": 1994, "singers": "Nusrat Fateh Ali Khan", "composer": "Nusrat Fateh Ali Khan", "lyricist": "Traditional Bandish", "desc_hi": "चंबल के बीहड़ों का सन्नाटा और एक बेबस रूह की वो चीख जो पत्थरों से टकराकर लौट आती है।", "desc_en": "An agonizing wail bouncing off canyon walls, expressing the primal torment of powerlessness.", "yt_id": "mNIU3WLnqBo"}, {"id": 93, "title": "Safarnama", "category": "रवानगी (Rawaangi)", "film": "Tamasha", "year": 2015, "singers": "Lucky Ali", "composer": "A. R. Rahman", "lyricist": "Irshad Kamil", "desc_hi": "सवालों और उलझनों के भंवर से बाहर निकलकर खुद को पाने और एक नई सुबह का स्वागत करने का सफर।", "desc_en": "Shedding the heavy skin of self-doubt and stepping lightly into the morning of self-acceptance.", "yt_id": "sOhESxhibAM"}, {"id": 94, "title": "Saiyaan", "category": "इबादत (Ibaadat)", "film": "Heroine", "year": 2012, "singers": "Rahat Fateh Ali Khan", "composer": "Salim-Sulaiman", "lyricist": "Amitabh Bhattacharya", "desc_hi": "रूहानी इश्क का वो मुकाम जहाँ दर्द भी राहत लगने लगता है और हर सांस इबादत बन जाती है।", "desc_en": "The ecstatic agony of unconditional devotion, where every tear is an offering at the beloved’s feet.", "yt_id": "6hjJZv_68vI"}, {"id": 95, "title": "Seeli Hawa Chhoo Gayi", "category": "तन्हाई (Tanhai)", "film": "Libaas", "year": 1988, "singers": "Lata Mangeshkar", "composer": "R. D. Burman", "lyricist": "Gulzar", "desc_hi": "सर्द हवाओं का एक झोंका जो जिस्म को छूकर सीधे पुरानी मोहब्बत के जख्मों को कुरेद देता है।", "desc_en": "A frosty gust cutting through coats, reigniting the phantom ache of a wound that never quite knit.", "yt_id": "jkoGVICCg10"}, {"id": 96, "title": "Seene Mein Jalan", "category": "फ़लसफ़ा (Falsafa)", "film": "Gaman", "year": 1978, "singers": "Suresh Wadkar", "composer": "Jaidev", "lyricist": "Shahryar", "desc_hi": "बड़े शहरों की तेज रफ्तार और अजनबी चेहरों की भीड़ में खुद को तलाशता एक तन्हा मुसाफिर।", "desc_en": "The suffocating loneliness of concrete canyons, where millions pass by yet no one sees the heart.", "yt_id": "u2_phT5vCP0"}, {"id": 97, "title": "Shaam Se Aankh Mein Nami Si Hai", "category": "तन्हाई (Tanhai)", "film": "Marasim", "year": 2000, "singers": "Jagjit Singh", "composer": "Jagjit Singh", "lyricist": "Gulzar", "desc_hi": "ढलती शाम की उदास पीली धूप, भीगी पलकें और पुरानी चिट्ठियों में महकती बीती हुई जिंदगी।", "desc_en": "Amber light melting across a desk, illuminating the salt-stained margins of an old love letter.", "yt_id": "3UsReAi_LIU"}, {"id": 98, "title": "Shauk Khwab Ka", "category": "अरमान (Armaan)", "film": "Jahan Tum Le Chalo", "year": 1999, "singers": "Lata Mangeshkar", "composer": "Vishal Bhardwaj", "lyricist": "Gulzar", "desc_hi": "ख्वाबों के नाजुक धागों को जोड़कर ज़िंदगी की चादर बुनने की एक कोमल और सुकून भरी कोशिश।", "desc_en": "Gathering fragile dreams from the dust and weaving them gently into a blanket against despair.", "yt_id": "TtMtzj61bc8"}, {"id": 99, "title": "Suno Suno Kehta Hai Kya", "category": "रवानगी (Rawaangi)", "film": "Suno (Lucky Ali)", "year": 1996, "singers": "Lucky Ali", "composer": "Lucky Ali", "lyricist": "Syed Rizvi", "desc_hi": "खुली वादियों, उड़ते परिंदों और बेपरवाह रास्तों का वो सुकून जो सारे तनाव को बहा ले जाता है।", "desc_en": "A gust of mountain air sweeping away mental clutter, inviting the soul to run barefoot with the clouds.", "yt_id": "HpidJ9uAXfg"}, {"id": 100, "title": "Tere Bina Jiya Jaye Na", "category": "जुदाई (Judai)", "film": "Ghar", "year": 1978, "singers": "Lata Mangeshkar", "composer": "R. D. Burman", "lyricist": "Gulzar", "desc_hi": "किसी के बिना घर की खाली दीवारों का काटना और शाम होते ही मन का भारी हो जाना।", "desc_en": "Empty chairs and cold teacups, realizing how hollow home becomes when its heartbeat is absent.", "yt_id": "pUfYjlbirT0"}, {"id": 101, "title": "Tere Bina Zindagi Se Koi Shikwa", "category": "जुदाई (Judai)", "film": "Aandhi", "year": 1976, "singers": "Kishore Kumar, Lata Mangeshkar", "composer": "R. D. Burman", "lyricist": "Gulzar", "desc_hi": "ज़िंदगी से कोई गिला नहीं, बस साथ न होने का एक ऐसा सूनापन जो कभी भर नहीं सकता।", "desc_en": "Living alongside grief with quiet dignity, acknowledging that some voids can never be filled.", "yt_id": "otSbGQIYgpQ"}, {"id": 102, "title": "Tere Mere Milan Ki Yeh Raina", "category": "इश्क़ (Ishq)", "film": "Abhimaan", "year": 1973, "singers": "Kishore Kumar, Lata Mangeshkar", "composer": "S. D. Burman", "lyricist": "Majrooh Sultanpuri", "desc_hi": "दो कलाकारों के दिलों का मिलन और रात की चादर तले एक-दूसरे की सांसों में समा जाना।", "desc_en": "A sacred nocturne of shared artistic breath, merging two creative souls into harmonious midnight.", "yt_id": "FZcTxHaljps"}, {"id": 103, "title": "Thak Gayi Ho To Suno", "category": "सुकूँ (Sukoon)", "film": "Jahan Tum Le Chalo", "year": 1999, "singers": "Suresh Wadkar", "composer": "Vishal Bhardwaj", "lyricist": "Gulzar", "desc_hi": "भागदौड़ से थक चुके मुसाफिर को पेड़ की छांव में सुस्ताने और गहरी सांस लेने का न्योता।", "desc_en": "An invitation to lay down the baggage of ambition and rest beneath the cool canopy of contentment.", "yt_id": "vXbeH1rYTVg"}, {"id": 104, "title": "Thoda Hai Thode Ki Zaroorat Hai", "category": "फ़लसफ़ा (Falsafa)", "film": "Khatta Meetha", "year": 1978, "singers": "Kishore Kumar, Lata Mangeshkar", "composer": "R. D. Burman", "lyricist": "Gulzar", "desc_hi": "थोड़ी सी खुशियों और मामूली जरूरतों में भी जिंदगी का सबसे बड़ा खजाना पा लेने का संतोष।", "desc_en": "Finding boundless riches in a single shared loaf, celebrating life’s sweet and unadorned simplicity.", "yt_id": "eVTQob2VwYY"}, {"id": 105, "title": "Tohe Piya Milenge", "category": "इबादत (Ibaadat)", "film": "Raanjhanaa", "year": 2013, "singers": "Sukhwinder Singh, Mohan Kanan", "composer": "A. R. Rahman", "lyricist": "Irshad Kamil", "desc_hi": "प्रेम की उस पराकाष्ठा पर पहुंचना जहाँ महबूब और परमात्मा के बीच का फर्क ही मिट जाए।", "desc_en": "The zenith of spiritual ecstasy, where the beloved’s face becomes the only temple worth entering.", "yt_id": "0YzoTG7AbzQ"}, {"id": 106, "title": "Tose Naina Laage", "category": "इबादत (Ibaadat)", "film": "Anwar", "year": 2007, "singers": "Kshitij Tarey, Shilpa Rao", "composer": "Mithoon", "lyricist": "Hasan Kamal", "desc_hi": "नजरों के मिलते ही दुनिया का ठहर जाना और पहली बार धड़कनों के बेकाबू होने का रूहानी जादू।", "desc_en": "The instant where gaze locks with gaze, and the universe quietly rearranges itself forever.", "yt_id": "y41Dqcpzr-Y"}, {"id": 107, "title": "Tu Bin Bataye Mujhe Le Chal Kahin", "category": "अरमान (Armaan)", "film": "Rang De Basanti", "year": 2006, "singers": "Madhushree, Naresh Iyer", "composer": "A. R. Rahman", "lyricist": "Prasoon Joshi", "desc_hi": "अनजाने रास्तों पर किसी का हाथ थामकर चल पड़ना, बिना यह जाने कि सफर कहाँ खत्म होगा।", "desc_en": "Trusting an unplanned path simply because a warm, steady hand is walking beside yours.", "yt_id": "jI7FFN4wW5E"}, {"id": 108, "title": "Tu Hi Meri Shab Hai", "category": "इश्क़ (Ishq)", "film": "Gangster", "year": 2006, "singers": "KK", "composer": "Pritam", "lyricist": "Sayeed Quadri", "desc_hi": "रात के सन्नाटे में दीवानगी की हद तक चाहने और हर सांस में सिर्फ उसी का नाम पुकारने का नशा।", "desc_en": "A dark, electric obsession where every heartbeat chants the name of the one who holds your peace.", "yt_id": "mWBvudKcByg"}, {"id": 109, "title": "Tu Jo Mila", "category": "इबादत (Ibaadat)", "film": "Bajrangi Bhaijaan", "year": 2015, "singers": "KK / Javed Ali", "composer": "Pritam", "lyricist": "Kausar Munir", "desc_hi": "जब भटकी हुई रूह को आखिरकार अपनी मंजिल मिल जाए और ज़िंदगी में पहली बार सुकून उतरे।", "desc_en": "The overwhelming grace of an arriving home, knowing the long and painful wandering is finally over.", "yt_id": "9i1Ri8kPoec"}, {"id": 110, "title": "Tu Mere Paas Bhi Hai Tu Mere Saath Bhi Hai", "category": "इश्क़ (Ishq)", "film": "Satya", "year": 1998, "singers": "Suresh Wadkar, Lata Mangeshkar", "composer": "Vishal Bhardwaj", "lyricist": "Gulzar", "desc_hi": "दूरियों के बावजूद दिलों का इतना करीब होना कि दूर बैठा साथी भी सांसों में महसूस हो।", "desc_en": "Defying physical horizons through heartbeats, feeling the phantom breath of someone miles away.", "yt_id": "X6tJuYstZDk"}, {"id": 111, "title": "Tu Muskura Jahan Bhi Hai", "category": "अरमान (Armaan)", "film": "Yuvvraaj", "year": 2008, "singers": "Alka Yagnik, Javed Ali", "composer": "A. R. Rahman", "lyricist": "Gulzar", "desc_hi": "महबूब के चेहरे पर एक नन्हीं मुस्कान देखने के लिए पूरी कायनात से लड़ जाने की पवित्र दुआ।", "desc_en": "A radiant prayer to the dawn, asking only that sorrow never touch the lips of the one you adore.", "yt_id": "U0nfYIIT4cU"}, {"id": 112, "title": "Tujhse Naraz Nahi Zindagi Hairan Hoon Main", "category": "फ़लसफ़ा (Falsafa)", "film": "Masoom", "year": 1983, "singers": "Anup Ghoshal / Lata Mangeshkar", "composer": "R. D. Burman", "lyricist": "Gulzar", "desc_hi": "ज़िंदगी के मासूम सवालों और बेबसी पर बिना किसी शिकायत के सिर्फ हैरानी से मुस्कुरा देना।", "desc_en": "Staring into life's baffling paradoxes without bitterness, greeting each riddle with compassionate wonder.", "yt_id": "LZ_YUOr-tYw"}, {"id": 113, "title": "Tum Mere Ho Bas Mere Hi Mere Ho", "category": "इश्क़ (Ishq)", "film": "Betaabi", "year": 1997, "singers": "Suresh Wadkar, Lata Mangeshkar", "composer": "Vishal Bhardwaj", "lyricist": "Sameer", "desc_hi": "बारिश की रात में अपने प्यार के आगोश में खुद को हमेशा के लिए खो देने का मीठा समर्पण।", "desc_en": "A rain-streaked midnight embrace, surrendering every reservation to the sanctuary of shared warmth.", "yt_id": "Ap8s6OrOmhg"}, {"id": 114, "title": "Tum Pukaar Lo Tumhara Intezar Hai", "category": "अरमान (Armaan)", "film": "Khamoshi", "year": 1969, "singers": "Hemant Kumar", "composer": "Hemant Kumar", "lyricist": "Gulzar", "desc_hi": "नदी के सूने किनारे पर खड़े होकर खोए हुए साथी को पुकारना, जहाँ सिर्फ गूंज लौटकर आती है।", "desc_en": "Calling across misty, deserted waters, listening as love’s despairing echo returns unanswered.", "yt_id": "cBlZECmmvmc"}, {"id": 115, "title": "Tumse Milkar Aisa Laga", "category": "इश्क़ (Ishq)", "film": "Parinda", "year": 1989, "singers": "Asha Bhosle, Suresh Wadkar", "composer": "R. D. Burman", "lyricist": "Javed Akhtar", "desc_hi": "पहली नजर के उस खुशनुमा अहसास की याद, जिसने जिंदगी की सारी वीरानियों को बहार में बदल दिया था।", "desc_en": "Revisiting that single golden moment when an unexpected glance turned an ordinary life into poetry.", "yt_id": "cRzIqA83c8I"}, {"id": 116, "title": "Woh Sham Kuch Ajeeb Thi", "category": "तन्हाई (Tanhai)", "film": "Khamoshi", "year": 1969, "singers": "Kishore Kumar", "composer": "Hemant Kumar", "lyricist": "Gulzar", "desc_hi": "ढलती शाम और दरिया का किनारा, जहाँ गुजरा हुआ कल आज भी अपनी परछाई लिए खड़ा है।", "desc_en": "Shadows stretching across riverbank pebbles, watching the sun dip while yesterday stands beside you.", "yt_id": "fRQYAUl38b0"}, {"id": 117, "title": "Yaad Na Aaye Koi", "category": "यादें (Yaadein)", "film": "Maachis", "year": 1996, "singers": "Lata Mangeshkar", "composer": "Vishal Bhardwaj", "lyricist": "Gulzar", "desc_hi": "भुलाने की जितनी कोशिश करो, पुरानी यादों का जख्म उतना ही ताजा होकर टीस देने लगता है।", "desc_en": "The irony of memory: the harder one tries to forget, the more vivid the ghost becomes.", "yt_id": "sP_NlJyY5P4"}, {"id": 118, "title": "Yaar Mangiya Si Rabba", "category": "जुदाई (Judai)", "film": "Kaante", "year": 2002, "singers": "Udit Narayan, Jaspinder Narula", "composer": "Anand Raj Anand", "lyricist": "Dev Kohli", "desc_hi": "बिछड़े साथी को लौटाने के लिए आसमान की तरफ हाथ उठाकर रो-रोकर की गई एक बेबस फरियाद।", "desc_en": "Hands raised toward an unmoving sky, weeping raw tears for the return of a stolen bond.", "yt_id": "f_d3XDTk7K4"}, {"id": 119, "title": "Yaara Sili Sili", "category": "जुदाई (Judai)", "film": "Lekin..", "year": 1990, "singers": "Lata Mangeshkar", "composer": "Hridaynath Mangeshkar", "lyricist": "Gulzar", "desc_hi": "सुलगती हुई विरह की वो राख, जो रात बीत जाने पर भी सीने के भीतर धुआं छोड़ती रहती है।", "desc_en": "Damp coals smoldering in the grate of memory, releasing bitter smoke into the room long past dawn.", "yt_id": "anzd8nEuGIQ"}, {"id": 120, "title": "Ye Dil Sun Raha Hai", "category": "तन्हाई (Tanhai)", "film": "Khamoshi: The Musical", "year": 1996, "singers": "Lata Mangeshkar", "composer": "Hemant Kumar", "lyricist": "Gulzar", "desc_hi": "जब खामोशी ही सबसे बड़ा सुकून बन जाए और लफ्जों के बिना भी सब कुछ मुकम्मल लगे।", "desc_en": "A tranquil pause where silence ceases to be empty and becomes the fullest expression of intimacy.", "yt_id": "gepYeviVxHk"}, {"id": 121, "title": "Ye Hum Aa Gaye Hain Kahan", "category": "सुकूँ (Sukoon)", "film": "Veer-Zaara", "year": 2004, "singers": "Lata Mangeshkar, Udit Narayan", "composer": "Madan Mohan", "lyricist": "Javed Akhtar", "desc_hi": "उस पावन प्रेम की दुनिया का अहसास, जहाँ दो रूहें मिलकर जमीन और आसमान के फर्क को मिटा देती हैं।", "desc_en": "Transcendental flight into higher realms, where love leaves earthly weight and sorrow far below.", "yt_id": "ZmZOT9IbaaM"}, {"id": 122, "title": "Ye jo Jinadagi hai", "category": "फ़लसफ़ा (Falsafa)", "film": "1947 Earth", "year": 1998, "singers": "Sukhwinder Singh", "composer": "A. R. Rahman", "lyricist": "Javed Akhtar", "desc_hi": "बंटवारे की विभीषिका में बिखरते इंसानों की वो चीख, जिसे सुनकर इतिहास भी रो पड़ा था।", "desc_en": "The shattered scream of humanity caught in political gears, mourning homes halved by ink and blood.", "yt_id": "bH91PO-AYA8"}, {"id": 123, "title": "Ye Raat Khushnaseeb Hai", "category": "इश्क़ (Ishq)", "film": "Aaina", "year": 1993, "singers": "Lata Mangeshkar", "composer": "Dilip Sen - Sameer Sen", "lyricist": "Sameer", "desc_hi": "चांदनी रात के स्वागत में खिलती हुई मुस्कान और महकती हुई रातों की एक मासूम उम्मीद।", "desc_en": "Welcoming the soft embrace of night with hopeful eyes, trusting that morning will bring sweet news.", "yt_id": "SnshSqqzwRM"}, {"id": 124, "title": "Yeh Tumhari Meri Baatein", "category": "सुकूँ (Sukoon)", "film": "Rock On!!", "year": 2004, "singers": "Alka Yagnik, Udit Narayan", "composer": "A. R. Rahman", "lyricist": "Javed Akhtar", "desc_hi": "तारों की छांव में बैठकर अपनी बिखरी हुई यादों को समेटने का एक शांत और सुकूनदेह लम्हा।", "desc_en": "Sitting quietly beneath constellation trails, gently arranging scattered thoughts like fallen petals.", "yt_id": "Q7xezSp-fy4"}, {"id": 125, "title": "Dekho Na", "category": "सुकूँ (Sukoon)", "film": "Swades", "year": 2004, "singers": "Alka Yagnik, Udit Narayan", "composer": "A. R. Rahman", "lyricist": "Javed Akhtar", "desc_hi": "मिट्टी की सौंधी खुशबू, गांव का खुला आसमान और अपनों के संग बिताए पलों का सच्चा सुकून।", "desc_en": "The smell of rain on baked farmland, sheltered by wide village skies and honest companionship.", "yt_id": "aYm91X8ZTGw"}, {"id": 126, "title": "Iktara", "category": "इबादत (Ibaadat)", "film": "Wake Up Sid", "year": 2009, "singers": "Kavita Seth, Amitabh Bhattacharya", "composer": "Amit Trivedi", "lyricist": "Javed Akhtar", "desc_hi": "देहरी पर दीया जलाकर उम्र भर किसी की राह तकते रहने का एक पवित्र और अडिग समर्पण।", "desc_en": "Keeping an unblinking lamp burning at the gate, waiting through decades with unwavering devotion.", "yt_id": "fSS_R91Nimw"}, {"id": 127, "title": "Pyar Ke Mod Pe", "category": "यादें (Yaadein)", "film": "Parinda", "year": 1989, "singers": "Suresh Wadkar, Asha Bhosle", "composer": "R. D. Burman", "lyricist": "Suraj Sanim", "desc_hi": "तन्हाई के सन्नाटे में गूंजती अंतरात्मा की आवाज, जो इंसान को खुद से रूबरू कराती है।", "desc_en": "A solitary chime vibrating in the chest, calling the weary traveler back to his own true essence.", "yt_id": "akjdj6iHttY"}, {"id": 128, "title": "Rut Aa Gayi Re", "category": "अहसास (Ehsaas)", "film": "1947 Earth", "year": 1998, "singers": "Sukhwinder Singh", "composer": "A. R. Rahman", "lyricist": "Javed Akhtar", "desc_hi": "ऋतुओं के बदलने के साथ बंजर धरती पर फिर से हरियाली और उम्मीदों के खिलने का उत्सव।", "desc_en": "The triumphant return of green shoots through cracked soil, celebrating life’s stubborn resilience.", "yt_id": "VUaVlLaCxuE"}, {"id": 129, "title": "Kisi Nazar Ko Tera Intezar Aaj Bhi Hai", "category": "अरमान (Armaan)", "film": "Aitbaar", "year": 1985, "singers": "Asha Bhosle, Bhupinder Singh", "composer": "Bappi Lahiri", "lyricist": "Hasan Kamal", "desc_hi": "बरसों बीत जाने के बाद भी किसी की राह तकती हुई निगाहें और दिल में ज़िंदा रहने वाली पुरानी चाहत।", "desc_en": "Eyes still searching the horizon years later, holding onto a timeless longing that refuses to fade.", "yt_id": "J6VXs94ODt8"}];
+
+    // Mood-Synchronized Scenic Visuals & Weather Effects (Matches each song's exact मिजाज़)
+    const MOOD_SCENARIOS = {
+      "बारिश (Baarish)": [
+        {
+          type: "rain",
+          image: "https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?q=80&w=1920&auto=format&fit=crop",
+          overlay: "linear-gradient(rgba(12, 20, 34, 0.28), rgba(8, 14, 24, 0.62))"
+        },
+        {
+          type: "rain",
+          image: "https://images.unsplash.com/photo-1428592953211-077101b2021b?q=80&w=1920&auto=format&fit=crop",
+          overlay: "linear-gradient(rgba(10, 18, 30, 0.28), rgba(8, 12, 20, 0.62))"
+        }
+      ],
+      "फ़लसफ़ा (Falsafa)": [
+        {
+          type: "stars",
+          image: "https://images.unsplash.com/photo-1513002749550-c59d786b8e6c?q=80&w=1920&auto=format&fit=crop",
+          overlay: "linear-gradient(rgba(14, 22, 38, 0.22), rgba(10, 14, 25, 0.56))"
+        },
+        {
+          type: "dust",
+          image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1920&auto=format&fit=crop",
+          overlay: "linear-gradient(rgba(15, 22, 34, 0.22), rgba(10, 14, 22, 0.56))"
+        }
+      ],
+      "इश्क़ (Ishq)": [
+        {
+          type: "dust",
+          image: "https://images.unsplash.com/photo-1495616811223-4d98c6e9c869?q=80&w=1920&auto=format&fit=crop",
+          overlay: "linear-gradient(rgba(34, 14, 24, 0.22), rgba(16, 10, 18, 0.56))"
+        },
+        {
+          type: "embers",
+          image: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=1920&auto=format&fit=crop",
+          overlay: "linear-gradient(rgba(30, 14, 22, 0.24), rgba(14, 10, 16, 0.58))"
+        }
+      ],
+      "जुदाई (Judai)": [
+        {
+          type: "snow",
+          image: "https://images.unsplash.com/photo-1491557345352-5929e343eb89?q=80&w=1920&auto=format&fit=crop",
+          overlay: "linear-gradient(rgba(12, 18, 32, 0.26), rgba(10, 14, 24, 0.60))"
+        },
+        {
+          type: "snow",
+          image: "https://images.unsplash.com/photo-1477601263568-180e2c6d046e?q=80&w=1920&auto=format&fit=crop",
+          overlay: "linear-gradient(rgba(14, 20, 34, 0.26), rgba(10, 14, 22, 0.60))"
+        }
+      ],
+      "तन्हाई (Tanhai)": [
+        {
+          type: "embers",
+          image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1920&auto=format&fit=crop",
+          overlay: "linear-gradient(rgba(22, 16, 12, 0.28), rgba(12, 10, 8, 0.62))"
+        },
+        {
+          type: "stars",
+          image: "https://images.unsplash.com/photo-1532767153582-b1a0e5145009?q=80&w=1920&auto=format&fit=crop",
+          overlay: "linear-gradient(rgba(10, 15, 28, 0.26), rgba(8, 12, 22, 0.60))"
+        }
+      ],
+      "रवानगी (Rawaangi)": [
+        {
+          type: "train",
+          image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=1920&auto=format&fit=crop",
+          overlay: "linear-gradient(rgba(18, 20, 26, 0.22), rgba(10, 12, 18, 0.56))"
+        },
+        {
+          type: "train",
+          image: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?q=80&w=1920&auto=format&fit=crop",
+          overlay: "linear-gradient(rgba(16, 20, 28, 0.24), rgba(10, 12, 18, 0.58))"
+        }
+      ],
+      "सुकूँ (Sukoon)": [
+        {
+          type: "dust",
+          image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1920&auto=format&fit=crop",
+          overlay: "linear-gradient(rgba(12, 22, 30, 0.22), rgba(10, 15, 22, 0.56))"
+        },
+        {
+          type: "stars",
+          image: "https://images.unsplash.com/photo-1532767153582-b1a0e5145009?q=80&w=1920&auto=format&fit=crop",
+          overlay: "linear-gradient(rgba(10, 16, 28, 0.24), rgba(8, 12, 22, 0.58))"
+        }
+      ],
+      "अरमान (Armaan)": [
+        {
+          type: "embers",
+          image: "https://images.unsplash.com/photo-1509316785289-025f5b846b35?q=80&w=1920&auto=format&fit=crop",
+          overlay: "linear-gradient(rgba(28, 18, 10, 0.22), rgba(14, 10, 6, 0.56))"
+        },
+        {
+          type: "dust",
+          image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1920&auto=format&fit=crop",
+          overlay: "linear-gradient(rgba(24, 18, 12, 0.22), rgba(12, 10, 8, 0.56))"
+        }
+      ],
+      "इबादत (Ibaadat)": [
+        {
+          type: "embers",
+          image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1920&auto=format&fit=crop",
+          overlay: "linear-gradient(rgba(16, 18, 32, 0.24), rgba(10, 12, 22, 0.58))"
+        },
+        {
+          type: "stars",
+          image: "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?q=80&w=1920&auto=format&fit=crop",
+          overlay: "linear-gradient(rgba(14, 16, 30, 0.24), rgba(10, 12, 22, 0.58))"
+        }
+      ],
+      "यादें (Yaadein)": [
+        {
+          type: "dust",
+          image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1920&auto=format&fit=crop",
+          overlay: "linear-gradient(rgba(24, 18, 14, 0.24), rgba(12, 10, 8, 0.58))"
+        },
+        {
+          type: "embers",
+          image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1920&auto=format&fit=crop",
+          overlay: "linear-gradient(rgba(20, 18, 12, 0.24), rgba(10, 12, 8, 0.58))"
+        }
+      ],
+      "अहसास (Ehsaas)": [
+        {
+          type: "dust",
+          image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1920&auto=format&fit=crop",
+          overlay: "linear-gradient(rgba(15, 20, 30, 0.22), rgba(10, 14, 20, 0.54))"
+        },
+        {
+          type: "dust",
+          image: "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?q=80&w=1920&auto=format&fit=crop",
+          overlay: "linear-gradient(rgba(20, 16, 24, 0.22), rgba(12, 10, 16, 0.54))"
+        }
+      ]
+    };
+
+    // State
+    let filteredSongs = [...ALL_SONGS];
+    let currentIndex = 0;
+    let isPlaying = false;
+    let isShuffle = true; // Default shuffle for effortless radio discovery
+    let currentLang = 'hi';
+    let currentGenre = 'All';
+    let currentSceneIdx = 0;
+    let ytPlayer = null;
+    let ytReady = false;
+    let activeBgLayer = 'A';
+    let progressTimer = null;
+
+    // Ambient Synthesizer State
+    let audioCtx = null;
+    let ambientGain = null;
+    let ambientPlaying = false;
+
+    function initVisitorCounter() {
+      const STORAGE_KEY = 'surmayi_visitor_count_v1';
+      let count = parseInt(localStorage.getItem(STORAGE_KEY), 10);
+      if (isNaN(count) || count < 715) {
+        // Default random starting count between 725 and 865
+        count = Math.floor(725 + Math.random() * 140);
+      } else {
+        // Increment by 1 to 3 on new visit, strictly capped at 10000
+        count = Math.min(10000, count + Math.floor(1 + Math.random() * 2));
+      }
+      localStorage.setItem(STORAGE_KEY, count.toString());
+      const badgeEl = document.getElementById('visitorCountBadge');
+      if (badgeEl) badgeEl.innerText = count.toLocaleString('en-IN');
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      initVisitorCounter();
+      initGenreMenu();
+      // Start with a soulful track and automatically match its mood visual
+      loadSong(0, false);
+      initWeatherCanvas();
+      startAutoSceneShuffle();
+      setupShareContent();
+      
+      document.addEventListener('click', (e) => {
+        const btn = document.getElementById('genreDropdownBtn');
+        const menu = document.getElementById('genreMenu');
+        if (!btn.contains(e.target) && !menu.contains(e.target)) {
+          menu.classList.add('hidden');
+        }
+      });
+      
+      document.getElementById('genreDropdownBtn').addEventListener('click', () => {
+        document.getElementById('genreMenu').classList.toggle('hidden');
+      });
+    });
+
+    function onYouTubeIframeAPIReady() {
+      const initialSong = filteredSongs[currentIndex] || ALL_SONGS[0];
+      ytPlayer = new YT.Player('ytPlayer', {
+        height: '200',
+        width: '200',
+        videoId: initialSong.yt_id,
+        playerVars: {
+          'autoplay': 0,
+          'controls': 0,
+          'disablekb': 1,
+          'fs': 0,
+          'rel': 0,
+          'playsinline': 1,
+          'origin': window.location.origin
+        },
+        events: {
+          'onReady': () => { ytReady = true; },
+          'onStateChange': onPlayerStateChange,
+          'onError': (e) => {
+            console.warn("Track restricted/unavailable, auto-skipping to next...", e.data);
+            playNext();
+          }
+        }
+      });
+    }
+
+    function onPlayerStateChange(event) {
+      if (event.data === YT.PlayerState.PLAYING) {
+        isPlaying = true;
+        updatePlayBtnUI(true);
+        startProgressTracking();
+      } else if (event.data === YT.PlayerState.PAUSED) {
+        isPlaying = false;
+        updatePlayBtnUI(false);
+        stopProgressTracking();
+      } else if (event.data === YT.PlayerState.ENDED) {
+        playNext();
+      }
+    }
+
+    function loadSong(index, autoPlay = true) {
+      if (index < 0 || index >= filteredSongs.length) return;
+      currentIndex = index;
+      const track = filteredSongs[currentIndex];
+
+      document.getElementById('playerTrackTitle').innerText = track.title;
+      document.getElementById('playerTrackSub').innerText = `${track.singers} • ${track.film} (${track.year})`;
+      const moodPillEl = document.getElementById('trackMoodPill');
+      if (moodPillEl) moodPillEl.innerText = track.category;
+      document.getElementById('filmBadge').innerText = `${track.film} (${track.year})`;
+      document.getElementById('singersBadge').innerText = track.singers;
+      const comp = track.composer ? `Music: ${track.composer}` : '';
+      const lyr = track.lyricist ? `Lyrics: ${track.lyricist}` : '';
+      document.getElementById('creditsExtraBadge').innerText = [comp, lyr].filter(Boolean).join(' | ');
+      
+      updatePoeticText();
+
+      // Crossfade to a visual & weather particle scene strictly matching the song's मिजाज़ (Mood)
+      applyMoodScenario(track.category);
+
+      if (ytReady && ytPlayer && ytPlayer.loadVideoById) {
+        if (autoPlay) {
+          ytPlayer.loadVideoById(track.yt_id);
+          isPlaying = true;
+          updatePlayBtnUI(true);
+        } else {
+          ytPlayer.cueVideoById(track.yt_id);
+          isPlaying = false;
+          updatePlayBtnUI(false);
+        }
+      }
+    }
+
+    function togglePlay() {
+      if (!ytReady || !ytPlayer) return;
+      if (isPlaying) {
+        ytPlayer.pauseVideo();
+      } else {
+        ytPlayer.playVideo();
+      }
+    }
+
+    function playNext() {
+      if (isShuffle && filteredSongs.length > 1) {
+        let nextRand;
+        do {
+          nextRand = Math.floor(Math.random() * filteredSongs.length);
+        } while (nextRand === currentIndex);
+        loadSong(nextRand, true);
+      } else {
+        const next = (currentIndex + 1) % filteredSongs.length;
+        loadSong(next, true);
+      }
+    }
+
+    function playPrev() {
+      const prev = (currentIndex - 1 + filteredSongs.length) % filteredSongs.length;
+      loadSong(prev, true);
+    }
+
+    function toggleShuffle() {
+      isShuffle = !isShuffle;
+      const btn = document.getElementById('shuffleBtn');
+      btn.classList.toggle('text-amber-300', isShuffle);
+      btn.classList.toggle('text-zinc-400', !isShuffle);
+    }
+
+    function updatePlayBtnUI(playing) {
+      const vinyl = document.getElementById('vinylIcon');
+      const iconSvg = document.getElementById('playIconSvg');
+      const toneArm = document.getElementById('toneArmSvg');
+      const eqViz = document.getElementById('eqVisualizer');
+      const statusTxt = document.getElementById('playerStatusText');
+
+      if (playing) {
+        vinyl.classList.remove('vinyl-pause');
+        if (toneArm) toneArm.classList.add('engaged');
+        if (eqViz) eqViz.classList.add('eq-playing');
+        if (statusTxt) statusTxt.innerText = 'Now Spinning';
+        iconSvg.innerHTML = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
+      } else {
+        vinyl.classList.add('vinyl-pause');
+        if (toneArm) toneArm.classList.remove('engaged');
+        if (eqViz) eqViz.classList.remove('eq-playing');
+        if (statusTxt) statusTxt.innerText = 'Paused';
+        iconSvg.innerHTML = '<path d="M8 5v14l11-7z"/>';
+      }
+    }
+
+    function updatePoeticText() {
+      const track = filteredSongs[currentIndex];
+      const el = document.getElementById('poeticSoulText');
+      el.style.opacity = '0';
+      setTimeout(() => {
+        el.innerText = currentLang === 'hi' ? track.desc_hi : track.desc_en;
+        el.style.opacity = '1';
+      }, 150);
+    }
+
+    function toggleLang() {
+      currentLang = currentLang === 'hi' ? 'en' : 'hi';
+      document.getElementById('langBtnText').innerText = currentLang === 'hi' ? 'EN / हिन्दी' : 'हिन्दी / EN';
+      updatePoeticText();
+    }
+
+    function startProgressTracking() {
+      stopProgressTracking();
+      progressTimer = setInterval(() => {
+        if (ytReady && ytPlayer && ytPlayer.getCurrentTime && ytPlayer.getDuration) {
+          const cur = ytPlayer.getCurrentTime() || 0;
+          const dur = ytPlayer.getDuration() || 0;
+          document.getElementById('currentTimeText').innerText = formatTime(cur);
+          document.getElementById('durationTimeText').innerText = formatTime(dur);
+          const pct = dur > 0 ? (cur / dur) * 100 : 0;
+          document.getElementById('progressBarFill').style.width = pct + '%';
+        }
+      }, 500);
+    }
+
+    function stopProgressTracking() {
+      if (progressTimer) clearInterval(progressTimer);
+    }
+
+    function seekTrack(e) {
+      if (!ytReady || !ytPlayer || !ytPlayer.getDuration) return;
+      const rect = document.getElementById('progressBarContainer').getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const pct = Math.max(0, Math.min(1, clickX / rect.width));
+      const seekToTime = pct * (ytPlayer.getDuration() || 0);
+      ytPlayer.seekTo(seekToTime, true);
+    }
+
+    function formatTime(sec) {
+      const m = Math.floor(sec / 60);
+      const s = Math.floor(sec % 60);
+      return `${m}:${s < 10 ? '0' : ''}${s}`;
+    }
+
+    // Mood Menu (Clean, without any song counts)
+    function initGenreMenu() {
+      const genres = Array.from(new Set(ALL_SONGS.map(s => s.category)));
+      const listEl = document.getElementById('genreMenuList');
+      listEl.innerHTML = genres.map(g => `
+        <button onclick="selectGenre('${g}')" class="w-full text-left px-3.5 py-2.5 text-sm rounded-xl hover:bg-white/15 flex items-center justify-between text-zinc-100 hover:text-white font-medium transition">
+          <span>${g}</span>
+        </button>
+      `).join('');
+    }
+
+    function selectGenre(genre) {
+      currentGenre = genre;
+      document.getElementById('genreMenu').classList.add('hidden');
+      document.getElementById('currentGenreLabel').innerText = genre === 'All' ? 'सभी मिजाज़ (All Moods)' : genre;
+      
+      if (genre === 'All') {
+        filteredSongs = [...ALL_SONGS];
+      } else {
+        filteredSongs = ALL_SONGS.filter(s => s.category === genre);
+      }
+
+      // Pick a random song from that mood and start playing immediately
+      const randomIdx = Math.floor(Math.random() * filteredSongs.length);
+      loadSong(randomIdx, true);
+    }
+
+    // Mood-Locked Auto-Shuffling Visual Engine (Cycles variations within the current song's exact mood)
+    let autoSceneTimer = null;
+    function applyMoodScenario(category) {
+      const pool = MOOD_SCENARIOS[category] || MOOD_SCENARIOS["सुकूँ (Sukoon)"];
+      let nextIdx = (currentSceneIdx + 1) % pool.length;
+      currentSceneIdx = nextIdx;
+      applyScenario(pool[currentSceneIdx]);
+    }
+
+    function startAutoSceneShuffle() {
+      if (autoSceneTimer) clearInterval(autoSceneTimer);
+      autoSceneTimer = setInterval(() => {
+        const currentTrack = filteredSongs[currentIndex] || ALL_SONGS[0];
+        applyMoodScenario(currentTrack.category);
+      }, 25000);
+    }
+
+    function applyScenario(sc) {
+
+      const layerA = document.getElementById('bgLayerA');
+      const layerB = document.getElementById('bgLayerB');
+      
+      const bgStyle = `${sc.overlay}, url('${sc.image}') center/cover no-repeat`;
+
+      if (activeBgLayer === 'A') {
+        layerB.style.background = bgStyle;
+        layerB.style.opacity = '1';
+        layerB.style.transform = 'scale(1.05)';
+        layerA.style.opacity = '0';
+        layerA.style.transform = 'scale(1.0)';
+        activeBgLayer = 'B';
+      } else {
+        layerA.style.background = bgStyle;
+        layerA.style.opacity = '1';
+        layerA.style.transform = 'scale(1.05)';
+        layerB.style.opacity = '0';
+        layerB.style.transform = 'scale(1.0)';
+        activeBgLayer = 'A';
+      }
+      currentWeatherMode = sc.type;
+    }
+
+    // Support Modal Controls
+    function toggleSupportModal() {
+      document.getElementById('supportModalBackdrop').classList.toggle('hidden');
+    }
+
+    function downloadSupportQR() {
+      const qrUrl = document.getElementById('upiQrImg').src;
+      const link = document.createElement('a');
+      link.href = qrUrl;
+      link.download = 'Surmayi_Support_QR.png';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    // Feedback Modal Controls
+    function toggleFeedbackModal() {
+      document.getElementById('feedbackModalBackdrop').classList.toggle('hidden');
+    }
+
+    function buildFeedbackMessage() {
+      const best = document.getElementById('fbBestSong').value.trim() || 'Not specified';
+      const suggest = document.getElementById('fbSuggestSong').value.trim() || 'None';
+      const improve = document.getElementById('fbImprove').value.trim() || 'None';
+      return `🎵 Surmayi Feedback 🎵\n\n1. Best Song: ${best}\n2. Suggested Song: ${suggest}\n3. Improvement Ideas: ${improve}`;
+    }
+
+    function sendFeedbackViaWhatsApp() {
+      const best = document.getElementById('fbBestSong').value.trim();
+      if (!best) {
+        document.getElementById('fbBestSong').focus();
+        return;
+      }
+      const text = encodeURIComponent(buildFeedbackMessage());
+      window.open(`https://api.whatsapp.com/send?phone=919422956776&text=${text}`, '_blank');
+      toggleFeedbackModal();
+    }
+
+    function submitFeedback(e) {
+      e.preventDefault();
+      const best = document.getElementById('fbBestSong').value.trim();
+      const suggest = document.getElementById('fbSuggestSong').value.trim();
+      const improve = document.getElementById('fbImprove').value.trim();
+
+      const existing = JSON.parse(localStorage.getItem('surmayi_feedbacks') || '[]');
+      existing.push({ bestSong: best, suggestedSong: suggest, improvement: improve, timestamp: new Date().toISOString() });
+      localStorage.setItem('surmayi_feedbacks', JSON.stringify(existing));
+
+      const subject = encodeURIComponent('Surmayi Radio — Visitor Feedback');
+      const body = encodeURIComponent(buildFeedbackMessage());
+      window.location.href = `mailto:vinod23884@gmail.com?subject=${subject}&body=${body}`;
+
+      const msg = document.getElementById('fbSuccessMsg');
+      msg.classList.remove('hidden');
+      setTimeout(() => {
+        msg.classList.add('hidden');
+        document.getElementById('feedbackForm').reset();
+        toggleFeedbackModal();
+      }, 1800);
+    }
+
+    // Share Modal Controls
+    function setupShareContent() {
+      const currentUrl = window.location.href.startsWith('http') ? window.location.href : 'https://surmayi.in';
+      document.getElementById('shareUrlInput').value = currentUrl;
+
+      const shareText = `✨ सुरमई (Surmayi) — रूहानी नगमों का मखमली ठहराव ✨\n\nजब मन को सुकून, बारिश की महक या पुरानी यादों की गर्माहट चाहिए हो, तो बिना किसी विज्ञापन के यह खूबसूरत संगीत रेडियो ज़रूर सुनें।\n\nA soulful, ad-free sanctuary of timeless Hindi melodies, poetic moods, and serene visuals. Tune in & unwind:\n🔗 ${currentUrl}`;
+      document.getElementById('shareMessageText').value = shareText;
+    }
+
+    function toggleShareModal() {
+      setupShareContent();
+      document.getElementById('shareModalBackdrop').classList.toggle('hidden');
+    }
+
+    function copyShareUrl() {
+      const urlInput = document.getElementById('shareUrlInput');
+      navigator.clipboard.writeText(urlInput.value).then(() => {
+        const btn = document.getElementById('copyUrlBtn');
+        btn.innerText = 'Copied!';
+        setTimeout(() => { btn.innerText = 'Copy URL'; }, 2000);
+      });
+    }
+
+    function copyShareMessage() {
+      const msgBox = document.getElementById('shareMessageText');
+      navigator.clipboard.writeText(msgBox.value).then(() => {
+        const btn1 = document.getElementById('copyMsgBtn');
+        const btn2 = document.getElementById('copyMsgMainBtn');
+        btn1.innerText = 'Copied!';
+        btn2.innerText = '✅ Message & Link Copied!';
+        setTimeout(() => {
+          btn1.innerText = 'Copy Full Message';
+          btn2.innerText = '📋 Copy Message & Link';
+        }, 2500);
+      });
+    }
+
+    function shareOnWhatsApp() {
+      const text = encodeURIComponent(document.getElementById('shareMessageText').value);
+      window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank');
+    }
+
+    // Ambient Synthesizer
+    function toggleAmbientSound() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+
+      if (!ambientPlaying) {
+        const bufferSize = audioCtx.sampleRate * 2;
+        const noiseBuffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+        const output = noiseBuffer.getChannelData(0);
+        let b0 = 0, b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0;
+        for (let i = 0; i < bufferSize; i++) {
+          const white = Math.random() * 2 - 1;
+          b0 = 0.99886 * b0 + white * 0.0555179;
+          b1 = 0.99332 * b1 + white * 0.0750759;
+          b2 = 0.96900 * b2 + white * 0.1538520;
+          b3 = 0.86650 * b3 + white * 0.3104856;
+          b4 = 0.55000 * b4 + white * 0.5329522;
+          b5 = -0.7616 * b5 - white * 0.0168980;
+          output[i] = b0 + b1 + b2 + b3 + b4 + b5 + b6 + white * 0.5362;
+          output[i] *= 0.04;
+          b6 = white * 0.115926;
+        }
+        const whiteNoise = audioCtx.createBufferSource();
+        whiteNoise.buffer = noiseBuffer;
+        whiteNoise.loop = true;
+
+        const filter = audioCtx.createBiquadFilter();
+        filter.type = 'lowpass';
+        filter.frequency.setValueAtTime(800, audioCtx.currentTime);
+
+        ambientGain = audioCtx.createGain();
+        ambientGain.gain.setValueAtTime(0.08, audioCtx.currentTime);
+
+        whiteNoise.connect(filter);
+        filter.connect(ambientGain);
+        ambientGain.connect(audioCtx.destination);
+        whiteNoise.start();
+
+        ambientPlaying = true;
+        document.getElementById('ambientStatus').innerText = 'Ambient: On';
+        document.getElementById('ambientBtn').classList.add('border-amber-300/50', 'text-amber-200');
+      } else {
+        if (ambientGain) {
+          ambientGain.gain.linearRampToValueAtTime(0.001, audioCtx.currentTime + 0.5);
+          setTimeout(() => {
+            ambientPlaying = false;
+            document.getElementById('ambientStatus').innerText = 'Ambient: Off';
+            document.getElementById('ambientBtn').classList.remove('border-amber-300/50', 'text-amber-200');
+          }, 500);
+        }
+      }
+    }
+
+    // Procedural Canvas Particles
+    let currentWeatherMode = 'dust';
+    function initWeatherCanvas() {
+      const canvas = document.getElementById('weatherCanvas');
+      const ctx = canvas.getContext('2d');
+      let w = canvas.width = window.innerWidth;
+      let h = canvas.height = window.innerHeight;
+
+      window.addEventListener('resize', () => {
+        w = canvas.width = window.innerWidth;
+        h = canvas.height = window.innerHeight;
+      });
+
+      const particles = Array.from({ length: 75 }, () => ({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        speed: 1 + Math.random() * 2.5,
+        len: 10 + Math.random() * 14,
+        size: Math.random() * 2 + 1,
+        opacity: Math.random() * 0.45 + 0.15
+      }));
+
+      function animate() {
+        ctx.clearRect(0, 0, w, h);
+        for (let p of particles) {
+          if (currentWeatherMode === 'rain') {
+            ctx.strokeStyle = `rgba(200, 225, 255, ${p.opacity})`;
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(p.x - 2, p.y + p.len);
+            ctx.stroke();
+            p.y += p.speed * 4;
+            p.x -= 0.5;
+          } else if (currentWeatherMode === 'snow') {
+            ctx.fillStyle = `rgba(255, 255, 255, ${p.opacity + 0.25})`;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.size * 1.3, 0, Math.PI * 2);
+            ctx.fill();
+            p.y += p.speed * 0.7;
+            p.x += Math.sin(p.y * 0.015) * 0.8;
+          } else if (currentWeatherMode === 'train') {
+            ctx.fillStyle = `rgba(255, 245, 220, ${p.opacity})`;
+            ctx.fillRect(p.x, p.y, p.len * 2, 1);
+            p.x -= p.speed * 8;
+          } else {
+            ctx.fillStyle = `rgba(255, 225, 150, ${p.opacity})`;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+            ctx.fill();
+            p.y -= p.speed * 0.3;
+            p.x += Math.sin(p.y * 0.02) * 0.5;
+          }
+
+          if (p.y > h) { p.y = -20; p.x = Math.random() * w; }
+          if (p.y < -20) { p.y = h + 10; p.x = Math.random() * w; }
+          if (p.x < -40) { p.x = w + 20; p.y = Math.random() * h; }
+        }
+        requestAnimationFrame(animate);
+      }
+      animate();
+    }
+  </script>
+</body>
+</html>
