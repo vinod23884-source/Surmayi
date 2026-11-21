@@ -12,7 +12,7 @@
   <style>
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      background-color: #0e1015;
+      background-color: #0b0d12;
       color: #f8fafc;
       overflow-x: hidden;
     }
@@ -23,24 +23,24 @@
       font-family: 'Cinzel', serif;
     }
     .glass-card {
-      background: rgba(16, 18, 26, 0.34);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+      background: linear-gradient(155deg, rgba(24, 20, 26, 0.46) 0%, rgba(12, 14, 22, 0.56) 100%);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(251, 191, 36, 0.22);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.12);
     }
     @media (min-width: 640px) {
       .glass-card {
-        background: rgba(18, 20, 28, 0.46);
-        backdrop-filter: blur(18px);
-        -webkit-backdrop-filter: blur(18px);
+        background: linear-gradient(155deg, rgba(26, 22, 28, 0.56) 0%, rgba(12, 14, 22, 0.66) 100%);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
       }
     }
     .glass-pill {
-      background: rgba(24, 27, 38, 0.62);
+      background: rgba(20, 23, 34, 0.65);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.15);
     }
     .vinyl-spin {
       animation: spin 18s linear infinite;
@@ -53,7 +53,7 @@
       to { transform: rotate(360deg); }
     }
     .bg-layer {
-      transition: opacity 1.4s cubic-bezier(0.4, 0, 0.2, 1), transform 25s ease-out;
+      transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1), transform 26s ease-out;
     }
     ::-webkit-scrollbar {
       width: 6px;
@@ -120,19 +120,20 @@
       100% { height: 18px; opacity: 1; }
     }
     .classy-player-shell {
-      background: linear-gradient(145deg, rgba(22, 19, 18, 0.42) 0%, rgba(12, 13, 18, 0.48) 100%);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(251, 191, 36, 0.38);
+      background: linear-gradient(145deg, rgba(28, 22, 24, 0.48) 0%, rgba(12, 14, 22, 0.56) 100%);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(251, 191, 36, 0.42);
       box-shadow:
-        0 20px 55px rgba(0, 0, 0, 0.55),
-        inset 0 1px 0 rgba(255, 243, 214, 0.22);
+        0 24px 60px rgba(0, 0, 0, 0.6),
+        0 0 35px rgba(251, 191, 36, 0.08),
+        inset 0 1px 0 rgba(255, 243, 214, 0.25);
     }
     @media (min-width: 640px) {
       .classy-player-shell {
-        background: linear-gradient(145deg, rgba(24, 21, 20, 0.62) 0%, rgba(12, 13, 18, 0.70) 100%);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
+        background: linear-gradient(145deg, rgba(28, 22, 24, 0.65) 0%, rgba(12, 14, 22, 0.74) 100%);
+        backdrop-filter: blur(22px);
+        -webkit-backdrop-filter: blur(22px);
       }
     }
     .player-minimized #playerExpandedBody {
@@ -148,19 +149,18 @@
   <div id="bgLayerA" class="bg-layer fixed inset-0 z-0 bg-cover bg-center opacity-100 scale-105"></div>
   <div id="bgLayerB" class="bg-layer fixed inset-0 z-0 bg-cover bg-center opacity-0 scale-100"></div>
   
-  <div class="fixed inset-0 z-0 pointer-events-none bg-gradient-to-t from-black/65 via-black/10 to-black/35"></div>
-  <div class="fixed inset-0 z-0 pointer-events-none bg-[radial-gradient(circle_at_center,_transparent_40%,_rgba(0,0,0,0.48)_100%)]"></div>
+  <div class="fixed inset-0 z-0 pointer-events-none bg-gradient-to-t from-black/70 via-black/15 to-black/40"></div>
+  <div class="fixed inset-0 z-0 pointer-events-none bg-[radial-gradient(circle_at_center,_rgba(251,191,36,0.06)_0%,_transparent_50%,_rgba(0,0,0,0.52)_100%)]"></div>
   
   <canvas id="weatherCanvas" class="fixed inset-0 z-0 pointer-events-none"></canvas>
 
-  <!-- Active YouTube IFrame Container with reliable dimensions & low opacity so browsers don't throttle -->
   <div id="ytPlayerContainer" style="position: fixed; bottom: 8px; right: 8px; width: 24px; height: 24px; opacity: 0.05; pointer-events: none; z-index: 1; overflow: hidden; border-radius: 4px;">
     <div id="ytPlayer"></div>
   </div>
 
   <header class="relative z-20 w-full px-3.5 sm:px-8 lg:px-12 py-2.5 sm:py-5 flex flex-wrap items-center justify-between gap-2 sm:gap-3">
     <div class="flex items-center gap-2.5 sm:gap-4">
-      <div class="w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full border-2 border-amber-300/60 flex items-center justify-center bg-black/45 backdrop-blur-md shadow-[0_0_25px_rgba(251,191,36,0.25)] flex-shrink-0">
+      <div class="w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full border-2 border-amber-300/70 flex items-center justify-center bg-black/50 backdrop-blur-md shadow-[0_0_28px_rgba(251,191,36,0.3)] flex-shrink-0">
         <span class="text-amber-300 font-hindi text-xl sm:text-3xl md:text-4xl leading-none mt-1">सु</span>
       </div>
       <div>
@@ -221,14 +221,26 @@
     </div>
   </header>
 
-  <!-- Main Stage: Open spacing on mobile so scenery stays visible + compact/minimisable player -->
-  <main class="relative z-10 flex-1 flex flex-col items-center justify-end sm:justify-center px-3 sm:px-6 pt-24 sm:py-6 pb-2.5 sm:pb-6 gap-2.5 sm:gap-6">
+  <main class="relative z-10 flex-1 flex flex-col items-center justify-end sm:justify-center px-3 sm:px-6 pt-10 sm:py-6 pb-2.5 sm:pb-6 gap-2.5 sm:gap-5">
+
+    <!-- Gentle Mood Invitation Card (Nazaakat bhara mood prompt) -->
+    <div id="moodPromptBanner" class="w-full max-w-2xl glass-card rounded-2xl px-3.5 py-2.5 sm:px-6 sm:py-3.5 border border-amber-300/25 shadow-xl">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        <p class="text-xs sm:text-sm text-amber-100/95 font-light tracking-wide leading-relaxed">
+          <span class="text-amber-300 font-hindi text-sm sm:text-base mr-1">✦</span>
+          कैसा मिज़ाज़ है आपका आज — क्या सुनना पसंद करोगे?
+        </p>
+        <button onclick="selectGenre('All')" class="self-start sm:self-auto px-3 py-1 rounded-full text-[11px] bg-amber-400/20 hover:bg-amber-400/30 text-amber-200 border border-amber-300/35 transition font-medium flex-shrink-0">
+          🎲 कुछ भी रूहानी
+        </button>
+      </div>
+      <div id="quickMoodChips" class="mt-2 flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar"></div>
+    </div>
 
     <div id="playerShellCard" class="w-full max-w-2xl classy-player-shell rounded-2xl sm:rounded-[32px] p-3 sm:p-8 relative overflow-hidden transition-all duration-300">
-      <div class="pointer-events-none absolute -top-24 -left-24 w-56 h-56 rounded-full bg-amber-400/10 blur-3xl"></div>
-      <div class="pointer-events-none absolute -bottom-24 -right-24 w-56 h-56 rounded-full bg-rose-500/10 blur-3xl"></div>
+      <div class="pointer-events-none absolute -top-24 -left-24 w-56 h-56 rounded-full bg-amber-400/12 blur-3xl"></div>
+      <div class="pointer-events-none absolute -bottom-24 -right-24 w-56 h-56 rounded-full bg-rose-500/12 blur-3xl"></div>
 
-      <!-- Top Console Bar with Equalizer, Mood Tag & Minimise/Expand Toggle -->
       <div class="relative flex items-center justify-between gap-2 pb-2 sm:pb-4 mb-2 sm:mb-4 border-b border-amber-200/15">
         <div class="flex items-center gap-2 min-w-0">
           <div id="eqVisualizer" class="flex items-end gap-[3px] h-4 sm:h-5 px-2 py-0.5 rounded-full bg-black/40 border border-amber-300/25 flex-shrink-0">
@@ -254,7 +266,6 @@
         </div>
       </div>
 
-      <!-- Compact Mini Bar always quick-accessible + Full Expanded Body -->
       <div id="playerExpandedBody">
         <div class="relative flex flex-row items-center gap-3 sm:gap-8">
           
@@ -327,7 +338,6 @@
         </div>
       </div>
 
-      <!-- Compact Mini Strip shown when minimized (keeps playback & next/prev accessible while freeing screen) -->
       <div id="miniPlaybackBar" class="hidden items-center justify-between gap-2 pt-0.5">
         <div class="min-w-0 flex-1">
           <p id="miniTrackTitle" class="text-xs sm:text-sm font-hindi text-white truncate">Aajkal Paon Zameen Par Nahi Padte Mere</p>
@@ -347,7 +357,6 @@
       </div>
     </div>
 
-    <!-- Poetic Description & Credits Card -->
     <div id="poeticCard" class="w-full max-w-2xl glass-card rounded-2xl sm:rounded-3xl p-3 sm:p-8 relative text-center group border border-white/15 hover:border-amber-300/30 transition-all duration-500 shadow-2xl">
       <div class="text-xl sm:text-3xl text-amber-300/60 font-serif leading-none select-none mb-0.5 sm:mb-1.5">“</div>
       
@@ -624,7 +633,7 @@
       {"id": 119, "title": "Yaara Sili Sili", "category": "जुदाई (Judai)", "film": "Lekin..", "year": 1990, "singers": "Lata Mangeshkar", "composer": "Hridaynath Mangeshkar", "lyricist": "Gulzar", "desc_hi": "सुलगती हुई विरह की वो राख, जो रात बीत जाने पर भी सीने के भीतर धुआं छोड़ती रहती है।", "desc_en": "Damp coals smoldering in the grate of memory, releasing bitter smoke into the room long past dawn.", "yt_id": "anzd8nEuGIQ"},
       {"id": 120, "title": "Ye Dil Sun Raha Hai", "category": "तन्हाई (Tanhai)", "film": "Khamoshi: The Musical", "year": 1996, "singers": "Lata Mangeshkar", "composer": "Hemant Kumar", "lyricist": "Gulzar", "desc_hi": "जब खामोशी ही सबसे बड़ा सुकून बन जाए और लफ्जों के बिना भी सब कुछ मुकम्मल लगे।", "desc_en": "A tranquil pause where silence ceases to be empty and becomes the fullest expression of intimacy.", "yt_id": "gepYeviVxHk"},
       {"id": 121, "title": "Ye Hum Aa Gaye Hain Kahan", "category": "सुकूँ (Sukoon)", "film": "Veer-Zaara", "year": 2004, "singers": "Lata Mangeshkar, Udit Narayan", "composer": "Madan Mohan", "lyricist": "Javed Akhtar", "desc_hi": "उस पावन प्रेम की दुनिया का अहसास, जहाँ दो रूहें मिलकर जमीन और आसमान के फर्क को मिटा देती हैं।", "desc_en": "Transcendental flight into higher realms, where love leaves earthly weight and sorrow far below.", "yt_id": "ZmZOT9IbaaM"},
-      {"id": 122, "title": "Ye jo Jindagi hai", "category": "फ़लसफ़ा (Falsafa)", "film": "1947 Earth", "year": 1998, "singers": "Sukhwinder Singh", "composer": "A. R. Rahman", "lyricist": "Javed Akhtar", "desc_hi": "बंटवारे की विभीषिका में बिखरते इंसानों की वो चीख, जिसे सुनकर इतिहास भी रो पड़ा था।", "desc_en": "The shattered scream of humanity caught in political gears, mourning homes halved by ink and blood.", "yt_id": "KoumY-w0P8s"},
+      {"id": 122, "title": "Ye jo Jinadagi hai", "category": "फ़लसफ़ा (Falsafa)", "film": "1947 Earth", "year": 1998, "singers": "Sukhwinder Singh", "composer": "A. R. Rahman", "lyricist": "Javed Akhtar", "desc_hi": "बंटवारे की विभीषिका में बिखरते इंसानों की वो चीख, जिसे सुनकर इतिहास भी रो पड़ा था।", "desc_en": "The shattered scream of humanity caught in political gears, mourning homes halved by ink and blood.", "yt_id": "KoumY-w0P8s"},
       {"id": 123, "title": "Ye Raat Khushnaseeb Hai", "category": "इश्क़ (Ishq)", "film": "Aaina", "year": 1993, "singers": "Lata Mangeshkar", "composer": "Dilip Sen - Sameer Sen", "lyricist": "Sameer", "desc_hi": "चांदनी रात के स्वागत में खिलती हुई मुस्कान और महकती हुई रातों की एक मासूम उम्मीद।", "desc_en": "Welcoming the soft embrace of night with hopeful eyes, trusting that morning will bring sweet news.", "yt_id": "NGmq0pLBtYo"},
       {"id": 124, "title": "Yeh Tumhari Meri Baatein", "category": "सुकूँ (Sukoon)", "film": "Rock On!!", "year": 2004, "singers": "Alka Yagnik, Udit Narayan", "composer": "A. R. Rahman", "lyricist": "Javed Akhtar", "desc_hi": "तारों की छांव में बैठकर अपनी बिखरी हुई यादों को समेटने का एक शांत और सुकूनदेह लम्हा।", "desc_en": "Sitting quietly beneath constellation trails, gently arranging scattered thoughts like fallen petals.", "yt_id": "pXZFuJKhBKA"},
       {"id": 125, "title": "Dekho Na", "category": "सुकूँ (Sukoon)", "film": "Swades", "year": 2004, "singers": "Alka Yagnik, Udit Narayan", "composer": "A. R. Rahman", "lyricist": "Javed Akhtar", "desc_hi": "मिट्टी की सौंधी खुशबू, गांव का खुला आसमान और अपनों के संग बिताए पलों का सच्चा सुकून।", "desc_en": "The smell of rain on baked farmland, sheltered by wide village skies and honest companionship.", "yt_id": "Cm7x27kou7w"},
@@ -635,7 +644,7 @@
     ];
 
     let filteredSongs = [...ALL_SONGS];
-    let currentIndex = 0;
+    let currentIndex = Math.floor(Math.random() * ALL_SONGS.length);
     let isPlaying = false;
     let isShuffle = true;
     let isMinimized = false;
@@ -667,7 +676,9 @@
     window.addEventListener('DOMContentLoaded', () => {
       initVisitorCounter();
       initGenreMenu();
-      loadSong(0, false);
+      initQuickMoodChips();
+      const startIdx = Math.floor(Math.random() * filteredSongs.length);
+      loadSong(startIdx, false);
       initWeatherCanvas();
       startAutoSceneShuffle();
       setupShareContent();
@@ -684,6 +695,17 @@
         document.getElementById('genreMenu').classList.toggle('hidden');
       });
     });
+
+    function initQuickMoodChips() {
+      const genres = Array.from(new Set(ALL_SONGS.map(s => s.category)));
+      const chipsEl = document.getElementById('quickMoodChips');
+      if (!chipsEl) return;
+      chipsEl.innerHTML = genres.map(g => `
+        <button onclick="selectGenre('${g}')" class="px-2.5 py-1 rounded-full text-[10px] sm:text-xs bg-white/10 hover:bg-amber-400/25 text-zinc-100 hover:text-amber-100 border border-white/10 hover:border-amber-300/40 transition whitespace-nowrap flex-shrink-0">
+          ${g}
+        </button>
+      `).join('');
+    }
 
     function togglePlayerMinimize() {
       isMinimized = !isMinimized;
