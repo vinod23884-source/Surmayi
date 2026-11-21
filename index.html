@@ -223,7 +223,6 @@
 
   <main class="relative z-10 flex-1 flex flex-col items-center justify-end sm:justify-center px-3 sm:px-6 pt-10 sm:py-6 pb-2.5 sm:pb-6 gap-2.5 sm:gap-5">
 
-    <!-- Gentle Mood Invitation Card (Nazaakat bhara mood prompt) -->
     <div id="moodPromptBanner" class="w-full max-w-2xl glass-card rounded-2xl px-3.5 py-2.5 sm:px-6 sm:py-3.5 border border-amber-300/25 shadow-xl">
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
         <p class="text-xs sm:text-sm text-amber-100/95 font-light tracking-wide leading-relaxed">
@@ -452,14 +451,14 @@
           <textarea id="fbImprove" rows="3" placeholder="Visuals, आवाज, नए मिजाज़ (Moods) या किसी भी फीचर पर अपनी राय दें..." class="w-full bg-white/10 border border-white/15 rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-zinc-400 focus:outline-none focus:border-amber-300"></textarea>
         </div>
         <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-2.5">
-          <span id="fbSuccessMsg" class="text-xs text-emerald-300 hidden">✅ शुक्रिया! आपका सुझाव तैयार है।</span>
+          <span id="fbSuccessMsg" class="text-xs text-emerald-300 hidden">✅ शुक्रिया! आपका सुझाव भेज दिया गया है।</span>
           <div class="w-full sm:w-auto ml-auto flex flex-col sm:flex-row items-center gap-2">
             <button type="button" onclick="sendFeedbackViaWhatsApp()" class="w-full sm:w-auto px-4 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold shadow-lg transition active:scale-95 flex items-center justify-center gap-1.5">
               <span>📲</span>
-              <span>Send via WhatsApp</span>
+              <span>WhatsApp</span>
             </button>
-            <button type="submit" class="w-full sm:w-auto px-5 py-2.5 rounded-full bg-amber-400 hover:bg-amber-300 text-black text-xs font-semibold shadow-lg transition active:scale-95">
-              ✉️ Send via Email
+            <button type="submit" id="fbSubmitBtn" class="w-full sm:w-auto px-5 py-2.5 rounded-full bg-amber-400 hover:bg-amber-300 text-black text-xs font-semibold shadow-lg transition active:scale-95">
+              ✉️ Submit Feedback
             </button>
           </div>
         </div>
@@ -512,6 +511,8 @@
 
   <script src="https://www.youtube.com/iframe_api"></script>
   <script>
+    const WEB3FORMS_ACCESS_KEY = '6a4654f1-4aee-4ae2-b1b4-aa08d19f1362';
+
     const ALL_SONGS = [
       {"id": 1, "title": "Aajkal Paon Zameen Par Nahi Padte Mere", "category": "इश्क़ (Ishq)", "film": "Ghar", "year": 1978, "singers": "Lata Mangeshkar", "composer": "R. D. Burman", "lyricist": "Gulzar", "desc_hi": "जब मोहब्बत में दिल इतना हल्का हो जाए कि कदम जमीन पर टिकना भूल जाएं। खिली हुई धूप और हवा में तैरते ख्वाबों की सरगोशी।", "desc_en": "The weightless intoxication of pure affection, where gravity loosens and the heart floats above the clouds.", "yt_id": "h8XlD8mXKmI"},
       {"id": 2, "title": "Aaj Jaane Ki Zid Na Karo", "category": "अरमान (Armaan)", "film": "Ae Dil Hai Mushkil", "year": 2016, "singers": "Arijit Singh", "composer": "Pritam / Sohail Rana", "lyricist": "Fayyaz Hashmi", "desc_hi": "रात के आखिरी पहर में किसी का हाथ थामकर वक्त को रोक लेने की भीगी हुई इल्तिज़ा। जब विदाई का ख्याल ही सीने में सिहरन भर दे।", "desc_en": "A fragile midnight plea to pause the dawn, clinging to lingering warmth before separation steals the room.", "yt_id": "W83ggCcHIQo"},
@@ -633,7 +634,7 @@
       {"id": 119, "title": "Yaara Sili Sili", "category": "जुदाई (Judai)", "film": "Lekin..", "year": 1990, "singers": "Lata Mangeshkar", "composer": "Hridaynath Mangeshkar", "lyricist": "Gulzar", "desc_hi": "सुलगती हुई विरह की वो राख, जो रात बीत जाने पर भी सीने के भीतर धुआं छोड़ती रहती है।", "desc_en": "Damp coals smoldering in the grate of memory, releasing bitter smoke into the room long past dawn.", "yt_id": "anzd8nEuGIQ"},
       {"id": 120, "title": "Ye Dil Sun Raha Hai", "category": "तन्हाई (Tanhai)", "film": "Khamoshi: The Musical", "year": 1996, "singers": "Lata Mangeshkar", "composer": "Hemant Kumar", "lyricist": "Gulzar", "desc_hi": "जब खामोशी ही सबसे बड़ा सुकून बन जाए और लफ्जों के बिना भी सब कुछ मुकम्मल लगे।", "desc_en": "A tranquil pause where silence ceases to be empty and becomes the fullest expression of intimacy.", "yt_id": "gepYeviVxHk"},
       {"id": 121, "title": "Ye Hum Aa Gaye Hain Kahan", "category": "सुकूँ (Sukoon)", "film": "Veer-Zaara", "year": 2004, "singers": "Lata Mangeshkar, Udit Narayan", "composer": "Madan Mohan", "lyricist": "Javed Akhtar", "desc_hi": "उस पावन प्रेम की दुनिया का अहसास, जहाँ दो रूहें मिलकर जमीन और आसमान के फर्क को मिटा देती हैं।", "desc_en": "Transcendental flight into higher realms, where love leaves earthly weight and sorrow far below.", "yt_id": "ZmZOT9IbaaM"},
-      {"id": 122, "title": "Ye jo Jinadagi hai", "category": "फ़लसफ़ा (Falsafa)", "film": "1947 Earth", "year": 1998, "singers": "Sukhwinder Singh", "composer": "A. R. Rahman", "lyricist": "Javed Akhtar", "desc_hi": "बंटवारे की विभीषिका में बिखरते इंसानों की वो चीख, जिसे सुनकर इतिहास भी रो पड़ा था।", "desc_en": "The shattered scream of humanity caught in political gears, mourning homes halved by ink and blood.", "yt_id": "KoumY-w0P8s"},
+      {"id": 122, "title": "Ye jo Jindagi hai", "category": "फ़लसफ़ा (Falsafa)", "film": "1947 Earth", "year": 1998, "singers": "Sukhwinder Singh", "composer": "A. R. Rahman", "lyricist": "Javed Akhtar", "desc_hi": "बंटवारे की विभीषिका में बिखरते इंसानों की वो चीख, जिसे सुनकर इतिहास भी रो पड़ा था।", "desc_en": "The shattered scream of humanity caught in political gears, mourning homes halved by ink and blood.", "yt_id": "KoumY-w0P8s"},
       {"id": 123, "title": "Ye Raat Khushnaseeb Hai", "category": "इश्क़ (Ishq)", "film": "Aaina", "year": 1993, "singers": "Lata Mangeshkar", "composer": "Dilip Sen - Sameer Sen", "lyricist": "Sameer", "desc_hi": "चांदनी रात के स्वागत में खिलती हुई मुस्कान और महकती हुई रातों की एक मासूम उम्मीद।", "desc_en": "Welcoming the soft embrace of night with hopeful eyes, trusting that morning will bring sweet news.", "yt_id": "NGmq0pLBtYo"},
       {"id": 124, "title": "Yeh Tumhari Meri Baatein", "category": "सुकूँ (Sukoon)", "film": "Rock On!!", "year": 2004, "singers": "Alka Yagnik, Udit Narayan", "composer": "A. R. Rahman", "lyricist": "Javed Akhtar", "desc_hi": "तारों की छांव में बैठकर अपनी बिखरी हुई यादों को समेटने का एक शांत और सुकूनदेह लम्हा।", "desc_en": "Sitting quietly beneath constellation trails, gently arranging scattered thoughts like fallen petals.", "yt_id": "pXZFuJKhBKA"},
       {"id": 125, "title": "Dekho Na", "category": "सुकूँ (Sukoon)", "film": "Swades", "year": 2004, "singers": "Alka Yagnik, Udit Narayan", "composer": "A. R. Rahman", "lyricist": "Javed Akhtar", "desc_hi": "मिट्टी की सौंधी खुशबू, गांव का खुला आसमान और अपनों के संग बिताए पलों का सच्चा सुकून।", "desc_en": "The smell of rain on baked farmland, sheltered by wide village skies and honest companionship.", "yt_id": "Cm7x27kou7w"},
@@ -1058,27 +1059,55 @@
       toggleFeedbackModal();
     }
 
-    function submitFeedback(e) {
+    async function submitFeedback(e) {
       e.preventDefault();
       const best = document.getElementById('fbBestSong').value.trim();
-      const suggest = document.getElementById('fbSuggestSong').value.trim();
-      const improve = document.getElementById('fbImprove').value.trim();
+      const suggest = document.getElementById('fbSuggestSong').value.trim() || 'None';
+      const improve = document.getElementById('fbImprove').value.trim() || 'None';
+      const submitBtn = document.getElementById('fbSubmitBtn');
+      const msg = document.getElementById('fbSuccessMsg');
 
       const existing = JSON.parse(localStorage.getItem('surmayi_feedbacks') || '[]');
       existing.push({ bestSong: best, suggestedSong: suggest, improvement: improve, timestamp: new Date().toISOString() });
       localStorage.setItem('surmayi_feedbacks', JSON.stringify(existing));
 
-      const subject = encodeURIComponent('Surmayi Radio — Visitor Feedback');
-      const body = encodeURIComponent(buildFeedbackMessage());
-      window.location.href = `mailto:vinod23884@gmail.com?subject=${subject}&body=${body}`;
+      submitBtn.disabled = true;
+      submitBtn.innerText = 'Sending...';
 
-      const msg = document.getElementById('fbSuccessMsg');
-      msg.classList.remove('hidden');
-      setTimeout(() => {
-        msg.classList.add('hidden');
-        document.getElementById('feedbackForm').reset();
-        toggleFeedbackModal();
-      }, 1800);
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            access_key: WEB3FORMS_ACCESS_KEY,
+            subject: 'Surmayi Radio — New Visitor Feedback',
+            from_name: 'Surmayi Listener',
+            best_song: best,
+            suggested_song: suggest,
+            improvement_ideas: improve
+          })
+        });
+
+        const result = await response.json();
+        if (result.success) {
+          msg.innerText = '✅ शुक्रिया! आपका सुझाव सीधे हमारे inbox में पहुँच गया है।';
+          msg.classList.remove('hidden');
+          setTimeout(() => {
+            msg.classList.add('hidden');
+            document.getElementById('feedbackForm').reset();
+            toggleFeedbackModal();
+          }, 1800);
+        } else {
+          throw new Error('Submission failed');
+        }
+      } catch (err) {
+        window.location.href = `mailto:vinod23884@gmail.com?subject=${encodeURIComponent('Surmayi Radio — Visitor Feedback')}&body=${encodeURIComponent(buildFeedbackMessage())}`;
+        msg.innerText = '⚠️ Auto-send unavailable, opening email app...';
+        msg.classList.remove('hidden');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerText = '✉️ Submit Feedback';
+      }
     }
 
     function setupShareContent() {
